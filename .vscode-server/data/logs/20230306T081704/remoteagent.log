@@ -1,0 +1,53 @@
+2023-03-06 08:17:04.534 [info] 
+
+
+
+
+2023-03-06 08:17:04.582 [info] Extension host agent started.
+2023-03-06 08:17:04.826 [info] [127.0.0.1][09fab5c2][ManagementConnection] New connection established.
+2023-03-06 08:17:04.828 [info] [127.0.0.1][a38d8b93][ExtensionHostConnection] New connection established.
+2023-03-06 08:17:04.833 [info] [127.0.0.1][a38d8b93][ExtensionHostConnection] <2419> Launched Extension Host Process.
+2023-03-06 08:17:11.718 [error] CodeExpectedError: Could not find pty on pty host
+    at S.L (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:27:6849)
+    at S.updateTitle (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:27:2630)
+    at Object.call (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:17:5043)
+    at l.s (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:15:5412)
+    at l.q (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:15:4915)
+    at /home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:15:4326
+    at n.invoke (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
+    at E.deliver (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:11:2070)
+    at c.fire (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:11:1708)
+    at process.T (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:9:20949)
+    at process.emit (node:events:526:28)
+    at emit (node:internal/child_process:938:14)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+2023-03-06 08:17:11.720 [error] CodeExpectedError: Could not find pty on pty host
+    at S.L (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:27:6849)
+    at S.updateIcon (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:27:2680)
+    at Object.call (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:17:5043)
+    at l.s (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:15:5412)
+    at l.q (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:15:4915)
+    at /home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:15:4326
+    at n.invoke (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
+    at E.deliver (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:11:2070)
+    at c.fire (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:11:1708)
+    at process.T (/home/longvu/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/platform/terminal/node/ptyHostMain.js:9:20949)
+    at process.emit (node:events:526:28)
+    at emit (node:internal/child_process:938:14)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+2023-03-06 08:22:04.591 [info] New EH opened, aborting shutdown
+2023-03-06 12:44:05.858 [info] [127.0.0.1][bdfdfb78][ManagementConnection] New connection established.
+2023-03-06 12:44:05.859 [info] [127.0.0.1][a36319b3][ExtensionHostConnection] New connection established.
+2023-03-06 12:44:05.869 [info] [127.0.0.1][a36319b3][ExtensionHostConnection] <6824> Launched Extension Host Process.
+2023-03-06 12:44:45.494 [info] [127.0.0.1][bdfdfb78][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-03-06 12:44:45.690 [info] [127.0.0.1][a36319b3][ExtensionHostConnection] <6824> Extension Host Process exited with code: 0, signal: null.
+2023-03-06 12:44:57.801 [info] [127.0.0.1][317ac42d][ManagementConnection] New connection established.
+2023-03-06 12:44:57.806 [info] [127.0.0.1][111012b1][ExtensionHostConnection] New connection established.
+2023-03-06 12:44:57.813 [info] [127.0.0.1][111012b1][ExtensionHostConnection] <7045> Launched Extension Host Process.
+2023-03-06 12:45:34.525 [info] [127.0.0.1][317ac42d][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-03-06 12:45:34.577 [info] [127.0.0.1][111012b1][ExtensionHostConnection] <7045> Extension Host Process exited with code: 0, signal: null.
+2023-03-06 12:45:43.630 [info] [127.0.0.1][61fc4843][ManagementConnection] New connection established.
+2023-03-06 12:45:43.634 [info] [127.0.0.1][2127ca64][ExtensionHostConnection] New connection established.
+2023-03-06 12:45:43.641 [info] [127.0.0.1][2127ca64][ExtensionHostConnection] <7236> Launched Extension Host Process.
+2023-03-06 14:54:52.867 [info] [127.0.0.1][61fc4843][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-03-06 14:54:53.220 [info] [127.0.0.1][2127ca64][ExtensionHostConnection] <7236> Extension Host Process exited with code: 0, signal: null.

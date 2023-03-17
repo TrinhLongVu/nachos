@@ -1,0 +1,48 @@
+2023-03-17 08:41:27.635 [info] 
+
+
+
+
+2023-03-17 08:41:27.672 [info] Extension host agent started.
+2023-03-17 08:41:30.568 [info] Got delay-shutdown request while in shutdown timeout, delaying
+2023-03-17 08:41:30.569 [info] Cancelling previous shutdown timeout
+2023-03-17 08:41:30.853 [info] [127.0.0.1][1736741c][ManagementConnection] New connection established.
+2023-03-17 08:41:30.854 [info] [127.0.0.1][2e45599d][ExtensionHostConnection] New connection established.
+2023-03-17 08:41:30.858 [info] [127.0.0.1][2e45599d][ExtensionHostConnection] <2358> Launched Extension Host Process.
+2023-03-17 08:41:37.874 [info] [127.0.0.1][1736741c][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-03-17 08:41:37.891 [info] [127.0.0.1][2e45599d][ExtensionHostConnection] <2358> Extension Host Process exited with code: 0, signal: null.
+2023-03-17 08:41:37.892 [info] Cancelling previous shutdown timeout
+2023-03-17 08:41:37.892 [info] Last EH closed, waiting before shutting down
+2023-03-17 08:41:45.338 [info] Got delay-shutdown request while in shutdown timeout, delaying
+2023-03-17 08:41:45.338 [info] Cancelling previous shutdown timeout
+2023-03-17 08:41:45.440 [info] [127.0.0.1][d2dcf8b9][ManagementConnection] New connection established.
+2023-03-17 08:41:45.449 [info] [127.0.0.1][366cc58b][ExtensionHostConnection] New connection established.
+2023-03-17 08:41:45.454 [info] [127.0.0.1][366cc58b][ExtensionHostConnection] <2568> Launched Extension Host Process.
+2023-03-17 08:41:52.333 [error] CodeExpectedError: Could not find pty on pty host
+    at S.L (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:6849)
+    at S.updateTitle (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:2630)
+    at Object.call (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:17:5043)
+    at l.s (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:15:5412)
+    at l.q (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:15:4915)
+    at /home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:15:4326
+    at n.invoke (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
+    at E.deliver (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:11:2070)
+    at c.fire (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:11:1708)
+    at process.T (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:9:20949)
+    at process.emit (node:events:526:28)
+    at emit (node:internal/child_process:938:14)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+2023-03-17 08:41:52.335 [error] CodeExpectedError: Could not find pty on pty host
+    at S.L (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:6849)
+    at S.updateIcon (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:2680)
+    at Object.call (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:17:5043)
+    at l.s (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:15:5412)
+    at l.q (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:15:4915)
+    at /home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:15:4326
+    at n.invoke (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
+    at E.deliver (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:11:2070)
+    at c.fire (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:11:1708)
+    at process.T (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:9:20949)
+    at process.emit (node:events:526:28)
+    at emit (node:internal/child_process:938:14)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)

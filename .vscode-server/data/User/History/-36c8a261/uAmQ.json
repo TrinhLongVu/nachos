@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "syscall.h": "c",
+        "fstream": "c",
+        "copyright.h": "c",
+        "iostream": "cpp",
+        "*.tcc": "cpp",
+        "optional": "cpp",
+        "ostream": "cpp",
+        "random": "cpp",
+        "typeinfo": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
+}

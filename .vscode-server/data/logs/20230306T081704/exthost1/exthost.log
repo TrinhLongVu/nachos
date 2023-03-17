@@ -1,0 +1,16 @@
+2023-03-06 08:17:07.850 [info] Extension host with pid 2419 started
+2023-03-06 08:17:07.908 [info] Lock '/home/longvu/.vscode-server/data/User/workspaceStorage/bb374153be6c64e0c7d2584e96dee820/vscode.lock': Lock acquired.
+2023-03-06 08:17:08.517 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-03-06 08:17:08.539 [info] ExtensionService#_doActivateExtension ms-vscode.cpptools, startup: false, activationEvent: 'onLanguage:cpp'
+2023-03-06 08:17:08.540 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2023-03-06 08:17:10.236 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2023-03-06 08:17:10.237 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-03-06 08:17:11.346 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:json'
+2023-03-06 08:17:11.348 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2023-03-06 08:17:11.349 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
+2023-03-06 08:17:11.350 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onLanguage:json'
+2023-03-06 08:17:12.060 [info] Eager extensions activated
+2023-03-06 08:17:12.060 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-03-06 08:17:12.061 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-03-06 08:17:12.663 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-03-06 08:17:19.072 [warning] DiagnosticCollection with name 'C/C++' does already exist.

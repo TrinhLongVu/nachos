@@ -1,0 +1,20 @@
+2023-03-13 13:38:15.149 [info] Extension host with pid 2039 started
+2023-03-13 13:38:15.156 [error] Error: EEXIST: file already exists, open '/home/longvu/.vscode-server/data/User/workspaceStorage/bb374153be6c64e0c7d2584e96dee820/vscode.lock'
+2023-03-13 13:38:15.216 [info] Lock '/home/longvu/.vscode-server/data/User/workspaceStorage/bb374153be6c64e0c7d2584e96dee820/vscode.lock': Could not acquire lock, checking if the file is stale.
+2023-03-13 13:38:15.217 [info] Lock '/home/longvu/.vscode-server/data/User/workspaceStorage/bb374153be6c64e0c7d2584e96dee820/vscode.lock': The pid 2636 appears to be gone.
+2023-03-13 13:38:15.217 [info] Lock '/home/longvu/.vscode-server/data/User/workspaceStorage/bb374153be6c64e0c7d2584e96dee820/vscode.lock': Deleting a stale lock.
+2023-03-13 13:38:15.229 [info] Lock '/home/longvu/.vscode-server/data/User/workspaceStorage/bb374153be6c64e0c7d2584e96dee820/vscode.lock': Lock acquired.
+2023-03-13 13:38:15.437 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-03-13 13:38:15.441 [info] ExtensionService#_doActivateExtension ms-vscode.cpptools, startup: false, activationEvent: 'onLanguage:cpp'
+2023-03-13 13:38:15.444 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2023-03-13 13:38:18.188 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2023-03-13 13:38:18.188 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-03-13 13:38:19.870 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:json'
+2023-03-13 13:38:19.897 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2023-03-13 13:38:19.900 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
+2023-03-13 13:38:19.903 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onLanguage:json'
+2023-03-13 13:38:20.860 [info] Eager extensions activated
+2023-03-13 13:38:20.861 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-03-13 13:38:20.861 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-03-13 13:38:21.588 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-03-13 13:38:41.459 [warning] DiagnosticCollection with name 'C/C++' does already exist.

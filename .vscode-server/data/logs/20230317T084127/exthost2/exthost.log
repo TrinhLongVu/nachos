@@ -1,0 +1,34 @@
+2023-03-17 08:41:47.862 [info] Extension host with pid 2568 started
+2023-03-17 08:41:47.895 [info] Lock '/home/longvu/.vscode-server/data/User/workspaceStorage/bb374153be6c64e0c7d2584e96dee820/vscode.lock': Lock acquired.
+2023-03-17 08:41:48.037 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-03-17 08:41:48.040 [info] ExtensionService#_doActivateExtension ms-vscode.cpptools, startup: false, activationEvent: 'onLanguage:cpp'
+2023-03-17 08:41:48.041 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2023-03-17 08:41:49.911 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2023-03-17 08:41:49.911 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-03-17 08:41:51.944 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:json'
+2023-03-17 08:41:51.945 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2023-03-17 08:41:51.946 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
+2023-03-17 08:41:51.946 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onLanguage:json'
+2023-03-17 08:41:52.728 [info] Eager extensions activated
+2023-03-17 08:41:52.729 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-03-17 08:41:52.729 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-03-17 08:41:53.668 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-03-17 08:42:00.248 [warning] DiagnosticCollection with name 'C/C++' does already exist.
+2023-03-17 08:44:18.799 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
+2023-03-17 08:44:22.258 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
+2023-03-17 08:44:27.531 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
+2023-03-17 08:44:32.949 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
+2023-03-17 08:44:38.196 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
+2023-03-17 08:44:43.426 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
+2023-03-17 08:44:56.707 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
+2023-03-17 08:45:01.966 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
+2023-03-17 08:45:07.213 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
+2023-03-17 08:45:12.417 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
+2023-03-17 08:45:17.652 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
+2023-03-17 08:45:22.908 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
+2023-03-17 08:45:28.164 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
+2023-03-17 08:45:33.397 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
+2023-03-17 08:45:38.798 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
+2023-03-17 08:45:44.247 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
+2023-03-17 08:45:49.868 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
+2023-03-17 08:45:55.288 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8768
