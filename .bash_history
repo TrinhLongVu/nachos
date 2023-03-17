@@ -1094,3 +1094,35 @@ make
 cd ../build.linux
 make
 longvu
+git remote add origin https://github.com/TrinhLongVu/nachos.git
+git init
+git remote add origin https://github.com/TrinhLongVu/nachos.git
+git init
+fatal: not a git repository (or any of the parent directories): .git
+git remote add origin https://github.com/TrinhLongVu/nachos.git
+git status
+git add
+gid add -a
+git add -a
+git add -A
+git init
+git add README.md
+git status
+git add -a
+git add -A
+git status
+git add -a
+git add -A
+git status
+git commiy -m "complete create file and open fil"
+git commit -m "complete create file and open file"
+git push
+git branch -M main
+git push -u origin main
+git status
+git commit -m "complete create file and open file"
+git add -A
+git status
+git add ".vscode-server/data/logs/20230317T084127/exthost2/vscode.git/Git.log"
+git status
+clear
