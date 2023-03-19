@@ -5,22 +5,18 @@
 * the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
 * the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
 *
-Server bound to 127.0.0.1:36849 (IPv4)
-Extension host agent listening on 36849
+Server bound to 127.0.0.1:36761 (IPv4)
+Extension host agent listening on 36761
 
-[08:41:27] 
-
-
+[11:24:25] 
 
 
-[08:41:27] Extension host agent started.
-Got delay-shutdown request while in shutdown timeout, delaying
-[08:41:30] Got delay-shutdown request while in shutdown timeout, delaying
-Cancelling previous shutdown timeout
-[08:41:30] Cancelling previous shutdown timeout
-[08:41:30] [127.0.0.1][1736741c][ManagementConnection] New connection established.
-[08:41:30] [127.0.0.1][2e45599d][ExtensionHostConnection] New connection established.
-[08:41:30] [127.0.0.1][2e45599d][ExtensionHostConnection] <2358> Launched Extension Host Process.
+
+
+[11:24:25] Extension host agent started.
+[11:24:26] [127.0.0.1][29799163][ManagementConnection] New connection established.
+[11:24:26] [127.0.0.1][c1951cc8][ExtensionHostConnection] New connection established.
+[11:24:26] [127.0.0.1][c1951cc8][ExtensionHostConnection] <2103> Launched Extension Host Process.
 [IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
   '-c',
   'wget --version > /dev/null\n' +
@@ -81,19 +77,19 @@ Cancelling previous shutdown timeout
     'fi\n' +
     'exit 0'
 ]
-[08:41:37] [127.0.0.1][1736741c][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
-[08:41:37] [127.0.0.1][2e45599d][ExtensionHostConnection] <2358> Extension Host Process exited with code: 0, signal: null.
+[11:25:03] [127.0.0.1][29799163][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[11:25:03] [127.0.0.1][c1951cc8][ExtensionHostConnection] <2103> Extension Host Process exited with code: 0, signal: null.
 Cancelling previous shutdown timeout
-[08:41:37] Cancelling previous shutdown timeout
+[11:25:03] Cancelling previous shutdown timeout
 Last EH closed, waiting before shutting down
-[08:41:37] Last EH closed, waiting before shutting down
+[11:25:03] Last EH closed, waiting before shutting down
 Got delay-shutdown request while in shutdown timeout, delaying
-[08:41:45] Got delay-shutdown request while in shutdown timeout, delaying
+[11:25:12] Got delay-shutdown request while in shutdown timeout, delaying
 Cancelling previous shutdown timeout
-[08:41:45] Cancelling previous shutdown timeout
-[08:41:45] [127.0.0.1][d2dcf8b9][ManagementConnection] New connection established.
-[08:41:45] [127.0.0.1][366cc58b][ExtensionHostConnection] New connection established.
-[08:41:45] [127.0.0.1][366cc58b][ExtensionHostConnection] <2568> Launched Extension Host Process.
+[11:25:12] Cancelling previous shutdown timeout
+[11:25:12] [127.0.0.1][32b83796][ManagementConnection] New connection established.
+[11:25:12] [127.0.0.1][5efa9e00][ExtensionHostConnection] New connection established.
+[11:25:12] [127.0.0.1][5efa9e00][ExtensionHostConnection] <2472> Launched Extension Host Process.
 [IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
   '-c',
   'wget --version > /dev/null\n' +
@@ -157,7 +153,7 @@ Cancelling previous shutdown timeout
 rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
 stack trace: CodeExpectedError: Could not find pty on pty host
     at S.L (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:6849)
-    at S.updateTitle (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:2630)
+    at S.updateIcon (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:2680)
     at Object.call (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:17:5043)
     at l.s (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:15:5412)
     at l.q (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:15:4915)
@@ -169,9 +165,9 @@ stack trace: CodeExpectedError: Could not find pty on pty host
     at process.emit (node:events:526:28)
     at emit (node:internal/child_process:938:14)
     at processTicksAndRejections (node:internal/process/task_queues:84:21)
-[08:41:52] Error [CodeExpectedError]: Could not find pty on pty host
+[11:25:18] Error [CodeExpectedError]: Could not find pty on pty host
     at S.L (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:6849)
-    at S.updateTitle (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:2630)
+    at S.updateIcon (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:2680)
     at Object.call (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:17:5043)
     at l.s (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:15:5412)
     at l.q (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:15:4915)
@@ -186,7 +182,7 @@ stack trace: CodeExpectedError: Could not find pty on pty host
 rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
 stack trace: CodeExpectedError: Could not find pty on pty host
     at S.L (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:6849)
-    at S.updateIcon (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:2680)
+    at S.updateTitle (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:2630)
     at Object.call (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:17:5043)
     at l.s (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:15:5412)
     at l.q (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:15:4915)
@@ -198,9 +194,9 @@ stack trace: CodeExpectedError: Could not find pty on pty host
     at process.emit (node:events:526:28)
     at emit (node:internal/child_process:938:14)
     at processTicksAndRejections (node:internal/process/task_queues:84:21)
-[08:41:52] Error [CodeExpectedError]: Could not find pty on pty host
+[11:25:18] Error [CodeExpectedError]: Could not find pty on pty host
     at S.L (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:6849)
-    at S.updateIcon (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:2680)
+    at S.updateTitle (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:2630)
     at Object.call (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:17:5043)
     at l.s (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:15:5412)
     at l.q (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:15:4915)
@@ -213,4 +209,4 @@ stack trace: CodeExpectedError: Could not find pty on pty host
     at emit (node:internal/child_process:938:14)
     at processTicksAndRejections (node:internal/process/task_queues:84:21)
 New EH opened, aborting shutdown
-[08:46:45] New EH opened, aborting shutdown
+[11:30:12] New EH opened, aborting shutdown

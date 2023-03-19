@@ -1126,3 +1126,89 @@ git status
 git add ".vscode-server/data/logs/20230317T084127/exthost2/vscode.git/Git.log"
 git status
 clear
+cd ../build.linux
+make
+cd ../test
+make
+cd ../build.linux
+make
+cd ../test
+make
+cd ../build.linux
+make
+cd ../test
+make
+../build.linux -x test
+../build.linux/nachos -x test
+make
+../build.linux/nachos -x test
+make
+../build.linux/nachos -x test
+make
+../build.linux/nachos -x test
+make
+cd ../build.linux
+make
+cd ../test
+mae
+make
+../build.linux/nachos -x test
+cd ../build.linuc
+cd ../build.linux
+make
+
+make
+../build.linux/nachos -x test
+cd ../test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+make
+cd ../build.linux
+,ale
+make
+cd ../test
+make
+../build.linux/nachos -x test
+make
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+make
+../build.linux/nachos -x test
+make
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+make
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+make
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd~
+cd ~
+make
+git status
+git aff
+git add -A
+git status
+git commit -m  "syscall connect and createSocket"
+git push
+clear
+git version
+ifconfig
+git add -A
+git status
+git commit -m "complete syscall create and openfile"
+git config --global user.email "vucongleo@gmail.com"
+git config --global user.name "TrinhLongVu"
+git commit -m "complete syscall create and openfile"
+git push
+git push --set-upstream origin master

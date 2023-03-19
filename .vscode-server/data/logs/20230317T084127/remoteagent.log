@@ -47,3 +47,6 @@
     at emit (node:internal/child_process:938:14)
     at processTicksAndRejections (node:internal/process/task_queues:84:21)
 2023-03-17 08:46:45.342 [info] New EH opened, aborting shutdown
+2023-03-17 09:40:18.188 [info] [127.0.0.1][d2dcf8b9][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-03-17 09:40:18.603 [info] [127.0.0.1][366cc58b][ExtensionHostConnection] <2568> Extension Host Process exited with code: 0, signal: null.
+2023-03-17 09:40:18.603 [info] Last EH closed, waiting before shutting down
