@@ -1212,3 +1212,258 @@ git config --global user.name "TrinhLongVu"
 git commit -m "complete syscall create and openfile"
 git push
 git push --set-upstream origin master
+cd newNachOS
+cd newNachos
+cd nachos
+cd NachOS-4.0
+cd code
+cd test
+make
+cd ../build.linux
+make
+cd ../test
+make
+cd ../build.linux
+make
+../build.linux/nachos -x Test
+../build.linux/nachos -x test
+make
+cd ../test
+make
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x Test
+../build.linux/nachos -x est
+../build.linux/nachos -x test
+make
+../build.linux/nachos -x test
+make
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+make
+cd ../build.linux
+../build.linux/nachos -x test
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+makke
+make
+cd ../test
+make
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+make
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ~
+make
+git status
+git add -a
+git add -A
+git status
+git commit -m "create syscall write"
+git push
+clear
+ifconfig
+/usr/bin/python3 /home/longvu/newNachos/server/server.py
+/usr/bin/python3 /home/longvu/newNachos/nachos/NachOS-4.0/server/server.py
+gcc –c program.c
+gcc –c server.c
+gcc server.c
+gcc server.c -o server
+./server
+gcc client.c -o client
+./client
+make
+../build.linux/nachos -x test
+make
+../build.linux/nachos -x test
+make
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+make
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+make
+cd ../build.linux
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+make
+../build.linux/nachos -x test
+make
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+make
+../build.linux/nachos -x test
+make
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ..build.linux
+make
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+make
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+make
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+make
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+make
+cd ../build.linux
+make
+../build.linux/nachos -x test
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ~
+ifconfig | grep "inet " | awk '{print $2}'
+cd -
+cd ../build.linux
+make
+cd ../test
+make
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+make
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+make
+../build.linux/nachos -x test
+make
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+make
+cd ../build.linux
+make
+../build.linux/nachos -x test
+make
+cd ../test
+../build.linux/nachos -x test
+./server
+gcc server.c -o server
+./server
+gcc server.c -o server
+make
+gcc server.c -o server
+cd ../test
+make
+../build.linux/nachos -x test
+make
+../build.linux/nachos -x test
+make
+../build.linux/nachos -x test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x test
+make
+cd ../build.linux
+make
+cd ../test
+make
+../build.linux/nachos -x test
+make
+../build.linux/nachos -x test
+cd !
+cd ~
+./server

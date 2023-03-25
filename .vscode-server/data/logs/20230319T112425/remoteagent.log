@@ -45,3 +45,16 @@
     at emit (node:internal/child_process:938:14)
     at processTicksAndRejections (node:internal/process/task_queues:84:21)
 2023-03-19 11:30:12.128 [info] New EH opened, aborting shutdown
+2023-03-19 13:58:17.099 [info] [127.0.0.1][32b83796][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-03-19 13:58:17.557 [info] [127.0.0.1][5efa9e00][ExtensionHostConnection] <2472> Extension Host Process exited with code: 0, signal: null.
+2023-03-19 13:58:17.558 [info] Last EH closed, waiting before shutting down
+2023-03-19 13:58:44.525 [info] Got delay-shutdown request while in shutdown timeout, delaying
+2023-03-19 13:58:44.525 [info] Cancelling previous shutdown timeout
+2023-03-19 13:58:44.642 [info] [127.0.0.1][c1a93a6d][ManagementConnection] New connection established.
+2023-03-19 13:58:44.649 [info] [127.0.0.1][269ec8d8][ExtensionHostConnection] New connection established.
+2023-03-19 13:58:44.659 [info] [127.0.0.1][269ec8d8][ExtensionHostConnection] <12444> Launched Extension Host Process.
+2023-03-19 14:02:03.828 [info] [127.0.0.1][c1a93a6d][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-03-19 14:02:04.450 [info] [127.0.0.1][269ec8d8][ExtensionHostConnection] <12444> Extension Host Process exited with code: 0, signal: null.
+2023-03-19 14:02:04.450 [info] Cancelling previous shutdown timeout
+2023-03-19 14:02:04.450 [info] Last EH closed, waiting before shutting down
+2023-03-19 14:07:04.466 [info] Last EH closed, shutting down

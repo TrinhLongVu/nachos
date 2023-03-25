@@ -1,0 +1,32 @@
+Experiment 'pythonPromptNewToolsExt' is active
+LSP Notebooks experiment is enabled
+LSP Notebooks interactive window support is enabled
+> conda info --json
+> C:\Users\Admin\AppData\Local\Programs\Python\Python311\python.exe -c "import sys;print(sys.executable)"
+[ERROR 2023-2-25 14:57:30.832]: [Error: Command failed: C:\Users\Admin\AppData\Local\Programs\Python\Python311\python.exe -c "import sys;print(sys.executable)"
+/bin/sh: 1: C:UsersAdminAppDataLocalProgramsPythonPython311python.exe: not found
+
+	at ChildProcess.exithandler (node:child_process:399:12)
+	at ChildProcess.emit (node:events:526:28)
+	at maybeClose (node:internal/child_process:1092:16)
+	at Socket.<anonymous> (node:internal/child_process:451:11)
+	at Socket.emit (node:events:526:28)
+	at Pipe.<anonymous> (node:net:687:12)] {
+  killed: false,
+  code: 127,
+  signal: null,
+  cmd: 'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -c "import sys;print(sys.executable)"'
+}
+> /usr/bin/python3 -I ./.vscode-server/extensions/ms-python.python-2023.4.1/pythonFiles/get_output_via_markers.py ./.vscode-server/extensions/ms-python.python-2023.4.1/pythonFiles/interpreterInfo.py
+Python interpreter path: /usr/bin/python3
+Starting Pylance language server.
+Send text to terminal: /usr/bin/python3 /home/longvu/newNachos/server/server.py
+Send text to terminal: /usr/bin/python3 /home/longvu/newNachos/nachos/NachOS-4.0/server/server.py
+Send text to terminal: /usr/bin/python3 /home/longvu/newNachos/nachos/NachOS-4.0/server/server.py
+Send text to terminal: /usr/bin/python3 /home/longvu/newNachos/nachos/NachOS-4.0/server/server.py
+Send text to terminal: /usr/bin/python3 /home/longvu/newNachos/nachos/NachOS-4.0/server/server.py
+Send text to terminal: /usr/bin/python3 /home/longvu/newNachos/nachos/NachOS-4.0/server/client.py
+Send text to terminal: /usr/bin/python3 /home/longvu/newNachos/nachos/NachOS-4.0/server/client.py
+Send text to terminal: /usr/bin/python3 /home/longvu/newNachos/nachos/NachOS-4.0/server/server.py
+Send text to terminal: /usr/bin/python3 /home/longvu/newNachos/nachos/NachOS-4.0/server/server.py
+Send text to terminal: /usr/bin/python3 /home/longvu/newNachos/nachos/NachOS-4.0/server/client.py

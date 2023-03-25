@@ -1,0 +1,30 @@
+[Info  - 2:57:31 PM] (10000) Pylance language server 2023.3.30 (pyright 68a8e98a) starting
+[Info  - 2:57:31 PM] (10000) Server root directory: /home/longvu/.vscode-server/extensions/ms-python.vscode-pylance-2023.3.30/dist
+[Info  - 2:57:31 PM] (10000) Starting service instance "longvu"
+[Info  - 2:57:31 PM] (10000) No configuration file found.
+[Info  - 2:57:31 PM] (10000) No pyproject.toml file found.
+[Info  - 2:57:31 PM] (10000) Setting pythonPath for service "longvu": "/usr/bin/python3"
+[Warn  - 2:57:31 PM] (10000) stubPath /home/longvu/typings is not a valid directory.
+[Info  - 2:57:32 PM] (10000) Assuming Python version 3.6
+[Info  - 2:57:32 PM] (10000) Assuming Python platform Linux
+[Info  - 2:57:32 PM] (10000) Searching for source files
+[Info  - 2:57:32 PM] (10000) No source files found.
+[Info  - 2:57:33 PM] (10000) Background analysis(1) root directory: /home/longvu/.vscode-server/extensions/ms-python.vscode-pylance-2023.3.30/dist
+[Info  - 2:57:33 PM] (10000) Background analysis(1) started
+[Info  - 3:14:12 PM] (10000) Searching for source files
+[Info  - 3:14:12 PM] (10000) Found 1 source file
+[Info  - 3:14:12 PM] (10000) Indexer background runner(2) root directory: /home/longvu/.vscode-server/extensions/ms-python.vscode-pylance-2023.3.30/dist (index)
+[Info  - 3:14:12 PM] (10000) Indexing(2) started
+[Info  - 3:14:14 PM] (10000) scanned(2) 64 files over 1 exec env
+[Info  - 3:14:17 PM] (10000) indexed(2) 29 files over 1 exec env
+[Info  - 3:14:17 PM] (10000) Indexing finished(2).
+[Info  - 3:15:46 PM] (10000) Searching for source files
+[Info  - 3:15:46 PM] (10000) No source files found.
+[Info  - 3:16:04 PM] (10000) Searching for source files
+[Info  - 3:16:04 PM] (10000) Found 1 source file
+[Info  - 3:19:36 PM] (10000) Searching for source files
+[Info  - 3:19:36 PM] (10000) Found 2 source files
+[Info  - 3:21:23 PM] (10000) Searching for source files
+[Info  - 3:21:23 PM] (10000) Found 1 source file
+[Info  - 3:25:33 PM] (10000) Searching for source files
+[Info  - 3:25:33 PM] (10000) No source files found.

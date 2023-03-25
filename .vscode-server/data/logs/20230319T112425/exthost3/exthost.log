@@ -1,0 +1,73 @@
+2023-03-19 13:58:47.199 [info] Extension host with pid 12444 started
+2023-03-19 13:58:47.293 [info] Lock '/home/longvu/.vscode-server/data/User/workspaceStorage/bb374153be6c64e0c7d2584e96dee820/vscode.lock': Lock acquired.
+2023-03-19 13:58:47.522 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-03-19 13:58:47.524 [info] ExtensionService#_doActivateExtension ms-vscode.cpptools, startup: false, activationEvent: 'onLanguage:cpp'
+2023-03-19 13:58:47.526 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2023-03-19 13:58:51.698 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2023-03-19 13:58:51.700 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-03-19 13:58:53.097 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:json'
+2023-03-19 13:58:53.100 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2023-03-19 13:58:53.101 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
+2023-03-19 13:58:53.102 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onLanguage:json'
+2023-03-19 13:58:53.923 [info] Eager extensions activated
+2023-03-19 13:58:53.923 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-03-19 13:58:53.924 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-03-19 13:58:55.472 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-03-19 13:59:00.132 [warning] DiagnosticCollection with name 'C/C++' does already exist.
+2023-03-19 14:02:03.956 [info] Extension host terminating: received terminate message from renderer
+2023-03-19 14:02:03.962 [info] Lock '/home/longvu/.vscode-server/data/User/workspaceStorage/bb374153be6c64e0c7d2584e96dee820/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+2023-03-19 14:02:04.079 [error] Canceled: Canceled
+	at new l (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:96:88793)
+	at a.O (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:106:11260)
+	at Proxy.V.<computed>.Q.charCodeAt.V.<computed> (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:106:8550)
+	at c.g (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:96:108198)
+	at c.executeCommand (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:96:107574)
+	at N.registerCommand.description (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:96:106867)
+	at c.h (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:96:108784)
+	at c.g (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:96:107674)
+	at c.executeCommand (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:96:107574)
+	at Object.executeCommand (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:117:30781)
+	at D (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/git/dist/main.js:2:1467127)
+	at f.invoke (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:63:145)
+	at m.deliver (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:63:2066)
+	at d.fire (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:63:1704)
+	at Object.m [as dispose] (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/git/dist/main.js:2:1481856)
+	at /home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/git/dist/main.js:2:1485923
+	at Array.forEach (<anonymous>)
+	at g.dispose (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/git/dist/main.js:2:1485909)
+	at D.<anonymous> (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:94:12431)
+	at D.dispose (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:94:12566)
+	at D.<anonymous> (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/git/dist/main.js:2:1469257)
+	at D.dispose (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:94:12566)
+	at k (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:10:12074)
+	at f.X (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:108:11284)
+	at /home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:108:9088
+	at Array.map (<anonymous>)
+	at f.Q (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:108:9075)
+	at f.terminate (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:108:9347)
+	at u.terminate (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:112:1397)
+	at p (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:122:18592)
+	at /home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:122:16502
+	at f.invoke (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:63:145)
+	at m.deliver (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:63:2066)
+	at d.fire (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:63:1704)
+	at p.fire (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:72:14907)
+	at t.E (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:72:18973)
+	at /home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:72:16961
+	at f.invoke (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:63:145)
+	at m.deliver (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:63:2066)
+	at d.fire (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:63:1704)
+	at u.acceptChunk (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:72:12638)
+	at /home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:72:11925
+	at f.invoke (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:63:145)
+	at m.deliver (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:63:2066)
+	at d.fire (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:63:1704)
+	at d.u (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/api/node/extensionHostProcess.js:72:28891) setContext undefined
+2023-03-19 14:02:04.432 [error] [ms-vscode.cpptools] provider FAILED
+2023-03-19 14:02:04.432 [error] Error: Pending response rejected since connection got disposed
+	at Object.dispose (/home/longvu/.vscode-server/extensions/ms-vscode.cpptools-1.14.4-linux-x64/dist/main.js:57932:27)
+	at Object.dispose (/home/longvu/.vscode-server/extensions/ms-vscode.cpptools-1.14.4-linux-x64/dist/main.js:61575:35)
+	at /home/longvu/.vscode-server/extensions/ms-vscode.cpptools-1.14.4-linux-x64/dist/main.js:61004:28
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2023-03-19 14:02:04.433 [info] Extension host with pid 12444 exiting with code 0

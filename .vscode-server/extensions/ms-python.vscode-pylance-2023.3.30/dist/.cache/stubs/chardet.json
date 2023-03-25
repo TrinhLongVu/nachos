@@ -1,0 +1,1 @@
+[["chardet/chardet/__init__.pyi",[false,[["UniversalDetector",true,2,["UniversalDetector","chardet/chardet/universaldetector.pyi",5]],["VERSION",true,2,["VERSION","chardet/chardet/version.pyi",14]],["__version__",true,2,["__version__","chardet/chardet/version.pyi",13]],["_LangModelType",true,5,null],["detect",true,12,null],["detect_all",true,12,null]]]]]

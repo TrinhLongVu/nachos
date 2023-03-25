@@ -1,0 +1,60 @@
+2023-03-25 14:03:52.766 [info] 
+
+
+
+
+2023-03-25 14:03:52.830 [info] Extension host agent started.
+2023-03-25 14:03:53.167 [info] [127.0.0.1][48e6c1bc][ManagementConnection] New connection established.
+2023-03-25 14:03:53.169 [info] [127.0.0.1][9965d451][ExtensionHostConnection] New connection established.
+2023-03-25 14:03:53.341 [info] [127.0.0.1][9965d451][ExtensionHostConnection] <2002> Launched Extension Host Process.
+2023-03-25 14:03:53.371 [info] Deleted from disk ms-vscode.cpptools /home/longvu/.vscode-server/extensions/ms-vscode.cpptools-1.14.4-linux-x64
+2023-03-25 14:08:52.839 [info] New EH opened, aborting shutdown
+2023-03-25 14:55:50.745 [info] Getting Manifest... ms-python.python
+2023-03-25 14:55:51.125 [info] Installing extension: ms-python.python
+2023-03-25 14:55:52.123 [info] Getting Manifest... ms-toolsai.jupyter
+2023-03-25 14:55:52.753 [info] Getting Manifest... ms-toolsai.jupyter-keymap
+2023-03-25 14:55:52.976 [info] Getting Manifest... ms-toolsai.jupyter-renderers
+2023-03-25 14:55:53.191 [info] Getting Manifest... ms-toolsai.vscode-jupyter-cell-tags
+2023-03-25 14:55:53.387 [info] Getting Manifest... ms-toolsai.vscode-jupyter-slideshow
+2023-03-25 14:55:53.611 [info] Getting Manifest... ms-python.vscode-pylance
+2023-03-25 14:55:54.026 [info] Installing extension: ms-toolsai.jupyter ms-python.python
+2023-03-25 14:55:54.028 [info] Installing extension: ms-toolsai.jupyter-keymap ms-python.python
+2023-03-25 14:55:54.029 [info] Installing extension: ms-toolsai.jupyter-renderers ms-python.python
+2023-03-25 14:55:54.030 [info] Installing extension: ms-toolsai.vscode-jupyter-cell-tags ms-python.python
+2023-03-25 14:55:54.031 [info] Installing extension: ms-toolsai.vscode-jupyter-slideshow ms-python.python
+2023-03-25 14:55:54.031 [info] Installing extension: ms-python.vscode-pylance ms-python.python
+2023-03-25 14:55:58.464 [info] Extension signature verification: ms-toolsai.vscode-jupyter-cell-tags. Verification status: Verified.
+2023-03-25 14:55:58.884 [info] Extracted extension to /home/longvu/.vscode-server/extensions/.f34e193f-8a7e-4cf3-b88c-06f0132041a7: ms-toolsai.vscode-jupyter-cell-tags
+2023-03-25 14:55:58.888 [info] Renamed to /home/longvu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.8
+2023-03-25 14:55:58.897 [info] Extracting extension completed. ms-toolsai.vscode-jupyter-cell-tags
+2023-03-25 14:56:00.509 [info] Extension signature verification: ms-toolsai.jupyter-keymap. Verification status: Verified.
+2023-03-25 14:56:00.590 [info] Extracted extension to /home/longvu/.vscode-server/extensions/.a6af765b-df56-4c63-9901-a432a248e53a: ms-toolsai.jupyter-keymap
+2023-03-25 14:56:00.603 [info] Renamed to /home/longvu/.vscode-server/extensions/ms-toolsai.jupyter-keymap-1.1.0
+2023-03-25 14:56:00.608 [info] Extracting extension completed. ms-toolsai.jupyter-keymap
+2023-03-25 14:56:01.261 [info] Extension signature verification: ms-toolsai.vscode-jupyter-slideshow. Verification status: Verified.
+2023-03-25 14:56:01.382 [info] Extracted extension to /home/longvu/.vscode-server/extensions/.8b39f9ed-920a-4da7-8df8-de24d0ffce59: ms-toolsai.vscode-jupyter-slideshow
+2023-03-25 14:56:01.386 [info] Renamed to /home/longvu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5
+2023-03-25 14:56:01.395 [info] Extracting extension completed. ms-toolsai.vscode-jupyter-slideshow
+2023-03-25 14:56:01.704 [info] Extension signature verification: ms-toolsai.jupyter. Verification status: Verified.
+2023-03-25 14:56:01.815 [info] Extension signature verification: ms-python.python. Verification status: Verified.
+2023-03-25 14:56:02.154 [info] Extension signature verification: ms-toolsai.jupyter-renderers. Verification status: Verified.
+2023-03-25 14:56:05.309 [info] Extracted extension to /home/longvu/.vscode-server/extensions/.52e95da1-5c02-4384-bb9e-a7f37a4269cb: ms-toolsai.jupyter-renderers
+2023-03-25 14:56:05.320 [info] Renamed to /home/longvu/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.15
+2023-03-25 14:56:05.327 [info] Extracting extension completed. ms-toolsai.jupyter-renderers
+2023-03-25 14:56:06.429 [info] Extracted extension to /home/longvu/.vscode-server/extensions/.1d07d17d-c771-4e26-9f66-07f316b5947d: ms-toolsai.jupyter
+2023-03-25 14:56:06.437 [info] Renamed to /home/longvu/.vscode-server/extensions/ms-toolsai.jupyter-2023.2.1200692131
+2023-03-25 14:56:06.453 [info] Extracting extension completed. ms-toolsai.jupyter
+2023-03-25 14:56:20.593 [info] Extracted extension to /home/longvu/.vscode-server/extensions/.4eb25b26-1cc4-435f-a82a-0242a781b00b: ms-python.python
+2023-03-25 14:56:20.602 [info] Renamed to /home/longvu/.vscode-server/extensions/ms-python.python-2023.4.1
+2023-03-25 14:56:20.617 [info] Extracting extension completed. ms-python.python
+2023-03-25 14:57:06.994 [info] Extension signature verification: ms-python.vscode-pylance. Verification status: Verified.
+2023-03-25 14:57:26.397 [info] Extracted extension to /home/longvu/.vscode-server/extensions/.7f35dc69-3b1f-4123-b00a-cd7d368e90fd: ms-python.vscode-pylance
+2023-03-25 14:57:26.407 [info] Renamed to /home/longvu/.vscode-server/extensions/ms-python.vscode-pylance-2023.3.30
+2023-03-25 14:57:26.414 [info] Extracting extension completed. ms-python.vscode-pylance
+2023-03-25 14:57:26.422 [info] Extension installed successfully: ms-toolsai.vscode-jupyter-cell-tags
+2023-03-25 14:57:26.423 [info] Extension installed successfully: ms-toolsai.jupyter-keymap
+2023-03-25 14:57:26.424 [info] Extension installed successfully: ms-toolsai.vscode-jupyter-slideshow
+2023-03-25 14:57:26.424 [info] Extension installed successfully: ms-toolsai.jupyter-renderers
+2023-03-25 14:57:26.424 [info] Extension installed successfully: ms-toolsai.jupyter
+2023-03-25 14:57:26.425 [info] Extension installed successfully: ms-python.python
+2023-03-25 14:57:26.425 [info] Extension installed successfully: ms-python.vscode-pylance
