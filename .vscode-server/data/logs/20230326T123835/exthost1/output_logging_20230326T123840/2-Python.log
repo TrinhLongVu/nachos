@@ -1,0 +1,6 @@
+Experiment 'pythonPromptNewToolsExt' is active
+LSP Notebooks experiment is enabled
+LSP Notebooks interactive window support is enabled
+> /usr/bin/python3 -I ./.vscode-server/extensions/ms-python.python-2023.4.1/pythonFiles/get_output_via_markers.py ./.vscode-server/extensions/ms-python.python-2023.4.1/pythonFiles/interpreterInfo.py
+Python interpreter path: /usr/bin/python3
+Starting Pylance language server.

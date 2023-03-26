@@ -5,3 +5,6 @@ Workspace folder /home/longvu
 User belongs to experiment group 'jupyterEnhancedDataViewer'
 User belongs to experiment group 'jupyterTestcf'
 info 14:57:29.576: LSP Notebooks experiment is enabled
+info 16:33:27.153: Shutting down notebooks for 8c0adeb0-97e3-4d8c-b1d6-26a00b18986d
+info 16:33:27.156: Disposing HostJupyterExecution 45d3299d-cc09-4f19-8be4-435d50358202
+info 16:33:27.158: Disposing HostJupyterExecution 45d3299d-cc09-4f19-8be4-435d50358202

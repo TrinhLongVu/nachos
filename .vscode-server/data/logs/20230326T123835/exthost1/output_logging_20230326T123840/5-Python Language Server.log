@@ -1,0 +1,14 @@
+[Info  - 12:38:54 PM] (2480) Pylance language server 2023.3.30 (pyright 68a8e98a) starting
+[Info  - 12:38:54 PM] (2480) Server root directory: /home/longvu/.vscode-server/extensions/ms-python.vscode-pylance-2023.3.30/dist
+[Info  - 12:38:54 PM] (2480) Starting service instance "longvu"
+[Info  - 12:38:54 PM] (2480) Auto-indent enabled
+[Info  - 12:38:55 PM] (2480) No configuration file found.
+[Info  - 12:38:55 PM] (2480) No pyproject.toml file found.
+[Info  - 12:38:55 PM] (2480) Setting pythonPath for service "longvu": "/usr/bin/python3"
+[Warn  - 12:38:55 PM] (2480) stubPath /home/longvu/typings is not a valid directory.
+[Info  - 12:38:55 PM] (2480) Assuming Python version 3.6
+[Info  - 12:38:55 PM] (2480) Assuming Python platform Linux
+[Info  - 12:38:56 PM] (2480) Searching for source files
+[Info  - 12:38:56 PM] (2480) No source files found.
+[Info  - 12:38:57 PM] (2480) Background analysis(1) root directory: /home/longvu/.vscode-server/extensions/ms-python.vscode-pylance-2023.3.30/dist
+[Info  - 12:38:57 PM] (2480) Background analysis(1) started

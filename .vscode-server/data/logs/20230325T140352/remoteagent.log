@@ -58,3 +58,7 @@
 2023-03-25 14:57:26.424 [info] Extension installed successfully: ms-toolsai.jupyter
 2023-03-25 14:57:26.425 [info] Extension installed successfully: ms-python.python
 2023-03-25 14:57:26.425 [info] Extension installed successfully: ms-python.vscode-pylance
+2023-03-25 16:25:46.047 [warning] No ptyHost heartbeat after 6 seconds
+2023-03-25 16:33:26.693 [info] [127.0.0.1][48e6c1bc][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-03-25 16:33:29.759 [info] [127.0.0.1][9965d451][ExtensionHostConnection] <2002> Extension Host Process exited with code: 0, signal: null.
+2023-03-25 16:33:29.759 [info] Last EH closed, waiting before shutting down

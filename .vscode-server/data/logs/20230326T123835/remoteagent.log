@@ -1,0 +1,12 @@
+2023-03-26 12:38:35.247 [info] 
+
+
+
+
+2023-03-26 12:38:35.294 [info] Extension host agent started.
+2023-03-26 12:38:35.575 [info] [127.0.0.1][f62cc52b][ManagementConnection] New connection established.
+2023-03-26 12:38:35.589 [info] [127.0.0.1][140ed8de][ExtensionHostConnection] New connection established.
+2023-03-26 12:38:35.685 [info] [127.0.0.1][140ed8de][ExtensionHostConnection] <2271> Launched Extension Host Process.
+2023-03-26 12:38:46.938 [error] [File Watcher (parcel)] Unexpected error: inotify_add_watch on '/home/longvu/.vscode-server/data/logs/20230310T153947' failed: No such file or directory (EUNKNOWN) (path: /home/longvu)
+2023-03-26 12:38:46.942 [error] [File Watcher (universal)] restarting watcher after error: inotify_add_watch on '/home/longvu/.vscode-server/data/logs/20230310T153947' failed: No such file or directory
+2023-03-26 12:43:35.303 [info] New EH opened, aborting shutdown

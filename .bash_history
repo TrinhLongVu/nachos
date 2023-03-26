@@ -1467,3 +1467,136 @@ make
 cd !
 cd ~
 ./server
+cd !
+cd ~
+git status
+git add -A
+git status
+git commit -m "create server"
+git push
+./server
+cd ../test
+cd ../
+cd test
+cd build.linux
+cd ../test
+make
+cd ../build.linux
+make
+cd ../test
+make
+../build.linux/nachos -x test
+../build.linux/nachos -x createfile
+make
+../build.linux/nachos -x createfile
+cd ../bui;d.linux
+cd ../build.linux
+make
+cd ../test
+make
+../build.linux/nachos -x createfile
+make
+cd ../test
+../build.linux/nachos -x createfile
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x createfile
+make
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x createfile
+make
+cd ../build.linux
+make
+cd ../test
+make
+../build.linux/nachos -x createfile
+cd ../build.linux
+make
+cd ../build.linux
+make
+cd ../test
+make
+../build.linux/nachos -x test
+make
+cd ../build.linux
+make
+cd ../test
+make
+../build.linux/nachos -x delte
+../build.linux/nachos -x delete
+make
+../build.linux/nachos -x delete
+./server
+make
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x TestClient
+make
+../build.linux/nachos -x TestClient
+make
+../build.linux/nachos -x TestClient
+cd ../build.linux
+make
+cd ../build.linux
+cd ../test
+make
+../build.linux/nachos -x TestClient
+make
+cd ../build.linux
+make
+cd ../build.linux
+make
+cd ../test
+make
+../build.linux/nachos -x TestClient
+make
+cd ../build.linux
+make
+cd ../test
+make
+../build.linux/nachos -x TestClient
+make
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x TestClient
+make
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x TestClient
+make
+../build.linux/nachos -x TestClient
+make
+cd ../build.linux
+make
+cd ../build.linux
+../build.linux/nachos -x TestClient
+cd ../test
+../build.linux/nachos -x TestClient
+cd ../test
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x TestClient
+cd ../test
+make
+../build.linux/nachos -x TestClient
+make
+../build.linux/nachos -x TestClient
+cd ../build.linux
+make
+cd ../test
+make
+../build.linux/nachos -x TestClient
+cd ../build.linux
+make
+cd ../test
+../build.linux/nachos -x TestClient
+make
+../build.linux/nachos -x TestClient
+make
