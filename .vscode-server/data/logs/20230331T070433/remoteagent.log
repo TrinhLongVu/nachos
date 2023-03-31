@@ -1,0 +1,44 @@
+2023-03-31 07:04:33.470 [info] 
+
+
+
+
+2023-03-31 07:04:33.535 [info] Extension host agent started.
+2023-03-31 07:04:33.787 [info] [127.0.0.1][a5abc912][ManagementConnection] New connection established.
+2023-03-31 07:04:33.790 [info] [127.0.0.1][d805c1a4][ExtensionHostConnection] New connection established.
+2023-03-31 07:04:33.939 [info] [127.0.0.1][d805c1a4][ExtensionHostConnection] <2005> Launched Extension Host Process.
+2023-03-31 07:04:33.952 [info] Deleted from disk ms-python.python /home/longvu/.vscode-server/extensions/ms-python.python-2023.4.1
+2023-03-31 07:04:33.953 [info] Deleted from disk ms-python.vscode-pylance /home/longvu/.vscode-server/extensions/ms-python.vscode-pylance-2023.3.30
+2023-03-31 07:04:33.953 [info] Deleted from disk ms-toolsai.jupyter /home/longvu/.vscode-server/extensions/ms-toolsai.jupyter-2023.2.1200692131
+2023-03-31 07:04:33.954 [info] Deleted from disk ms-toolsai.jupyter-keymap /home/longvu/.vscode-server/extensions/ms-toolsai.jupyter-keymap-1.1.0
+2023-03-31 07:04:33.954 [info] Deleted from disk ms-toolsai.jupyter-renderers /home/longvu/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.15
+2023-03-31 07:04:33.955 [info] Deleted from disk ms-toolsai.vscode-jupyter-cell-tags /home/longvu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.8
+2023-03-31 07:04:33.955 [info] Deleted from disk ms-toolsai.vscode-jupyter-slideshow /home/longvu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5
+2023-03-31 07:04:39.919 [info] [127.0.0.1][a5abc912][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-03-31 07:04:39.985 [info] [127.0.0.1][d805c1a4][ExtensionHostConnection] <2005> Extension Host Process exited with code: 0, signal: null.
+2023-03-31 07:04:39.986 [info] Cancelling previous shutdown timeout
+2023-03-31 07:04:39.986 [info] Last EH closed, waiting before shutting down
+2023-03-31 07:04:47.425 [info] Got delay-shutdown request while in shutdown timeout, delaying
+2023-03-31 07:04:47.425 [info] Cancelling previous shutdown timeout
+2023-03-31 07:04:47.519 [info] [127.0.0.1][77cbf1a7][ManagementConnection] New connection established.
+2023-03-31 07:04:47.534 [info] [127.0.0.1][c9a1d2e3][ExtensionHostConnection] New connection established.
+2023-03-31 07:04:47.541 [info] [127.0.0.1][c9a1d2e3][ExtensionHostConnection] <2206> Launched Extension Host Process.
+2023-03-31 07:04:50.470 [error] CodeExpectedError: Could not find pty on pty host
+    at S.L (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:6849)
+    at S.updateTitle (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:27:2630)
+    at Object.call (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:17:5043)
+    at l.s (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:15:5412)
+    at l.q (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:15:4915)
+    at /home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:15:4326
+    at n.invoke (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
+    at E.deliver (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:11:2070)
+    at c.fire (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:11:1708)
+    at process.T (/home/longvu/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/platform/terminal/node/ptyHostMain.js:9:20949)
+    at process.emit (node:events:526:28)
+    at emit (node:internal/child_process:938:14)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+2023-03-31 07:09:47.429 [info] New EH opened, aborting shutdown
+2023-03-31 07:11:38.218 [info] [127.0.0.1][77cbf1a7][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-03-31 07:11:40.719 [info] [127.0.0.1][c9a1d2e3][ExtensionHostConnection] <2206> Extension Host Process exited with code: 0, signal: null.
+2023-03-31 07:11:40.720 [info] Last EH closed, waiting before shutting down
+2023-03-31 07:17:00.889 [info] Last EH closed, shutting down

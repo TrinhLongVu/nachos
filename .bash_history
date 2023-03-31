@@ -1600,3 +1600,11 @@ cd ../test
 make
 ../build.linux/nachos -x TestClient
 make
+cd ~
+git add -A
+git status
+git commit -m "update use a single array for file and network management and type for file"
+git push
+git status
+git add -A
+git commit
