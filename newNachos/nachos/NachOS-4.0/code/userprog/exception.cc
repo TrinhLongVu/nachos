@@ -85,7 +85,7 @@ void countPosFree()
 {
 	for (int i = 0; i < 20; i++)
 	{
-		if (list[posfree].socket && list[posfree].Fileid)
+		if (list[posfree].socket || list[posfree].Fileid)
 		{
 			posfree++;
 		}
@@ -97,8 +97,14 @@ void SysPrintChar(char character)
 	kernel->synchConsoleOut->PutChar(character);
 }
 
-void SysPrintString(char *content)
+void SysPrintString()
 {
+	int idbuffer = kernel->machine->ReadRegister(4);
+
+	char *content = new char[MAX_OPEN_FILE_NAME];
+	bzero(content, MAX_OPEN_FILE_NAME);
+	readFromMem(content, MAX_OPEN_FILE_NAME, idbuffer);
+
 	for (int i = 0; i < strlen(content); i++)
 	{
 		kernel->synchConsoleOut->PutChar(content[i]);
@@ -225,7 +231,7 @@ void Receive()
 	}
 	shortRetval = recv(list[socketid].socket, contentSend, sizeContent, 0);
 	/////////////////////////////////////////////
-	SysPrintString(contentSend);
+
 	kernel->machine->WriteRegister(2, shortRetval);
 }
 
@@ -258,12 +264,13 @@ void Open()
 	if (list[posfree].Fileid && posfree < 20)
 	{
 		cout << "open success" << endl;
-		kernel->machine->WriteRegister(2, i);
+		kernel->machine->WriteRegister(2, posfree);
+		//	cout << "\n" << posfree <<"\n" ;
 		countPosFree();
 	}
 	else
 	{
-		cout << "open error: cannot file" << endl;
+		cout << "open error: cannot open file" << endl;
 		kernel->machine->WriteRegister(2, -1);
 	}
 }
@@ -271,15 +278,65 @@ void Open()
 void Close()
 {
 	int AddrFileName = kernel->machine->ReadRegister(4);
-
-	if (list[AddrFileName].Fileid != 0)
+	if (list[AddrFileName].flag == OPENFILE)
 	{
-		delete list[AddrFileName].Fileid;
-		list[AddrFileName].Fileid = NULL;
+		if (list[AddrFileName].Fileid != 0)
+		{
+			delete list[AddrFileName].Fileid;
+			list[AddrFileName].Fileid = NULL;
+		}
+		else
+		{
+			cout << "close file error" << endl;
+		}
 	}
 	else
 	{
-		cout << "close file error" << endl;
+		cout << "it's not file, can't close !!!"
+			 << "\n";
+	}
+}
+
+void Read()
+{
+
+	int idbuffer = kernel->machine->ReadRegister(4);
+	int charcount = kernel->machine->ReadRegister(5);
+	int ID = kernel->machine->ReadRegister(6);
+	if (list[ID].flag == OPENFILE)
+	{
+		char *buffer = new char[MAX_OPEN_FILE_NAME];
+		bzero(buffer, MAX_OPEN_FILE_NAME);
+		readFromMem(buffer, MAX_OPEN_FILE_NAME, idbuffer);
+
+		if (list[ID].Fileid != 0 && list[ID].typeFile == READ_WRITE)
+		{
+			int result = list[ID].Fileid->Read(buffer, charcount);
+
+			kernel->machine->WriteRegister(2, result);
+			writeToMem(buffer, MAX_OPEN_FILE_NAME, idbuffer);
+		}
+		else
+		{
+			kernel->machine->WriteRegister(2, -1);
+		}
+	}
+	else
+	{
+		static char contentSend[MAX_CONTENT];
+		bzero(contentSend, MAX_CONTENT);
+		readFromMem(contentSend, MAX_CONTENT, idbuffer);
+
+		int shortRetval = -1;
+		struct timeval tv;
+		tv.tv_sec = 20; /* 20 Secs Timeout */
+		tv.tv_usec = 0;
+		if (setsockopt(list[ID].socket, SOL_SOCKET, SO_SNDTIMEO, (char *)&tv, sizeof(tv)) < 0)
+		{
+			kernel->machine->WriteRegister(2, -1);
+		}
+		shortRetval = send(list[ID].socket, contentSend, charcount, 0);
+		kernel->machine->WriteRegister(2, shortRetval);
 	}
 }
 
@@ -307,7 +364,7 @@ void write()
 	}
 	else
 	{
-		static char contentSend[MAX_CONTENT];
+		char* contentSend = new char[MAX_CONTENT];
 		bzero(contentSend, MAX_CONTENT);
 		readFromMem(contentSend, MAX_CONTENT, idbuffer);
 
@@ -321,7 +378,7 @@ void write()
 		}
 		shortRetval = recv(list[ID].socket, contentSend, charcount, 0);
 		/////////////////////////////////////////////
-		SysPrintString(contentSend);
+		writeToMem(contentSend, MAX_CONTENT, idbuffer);
 		kernel->machine->WriteRegister(2, shortRetval);
 	}
 }
@@ -411,6 +468,18 @@ void ExceptionHandler(ExceptionType which)
 		case SC_Write:
 		{
 			write();
+			break;
+		}
+
+		case SC_PrintString:
+		{
+			SysPrintString();
+			break;
+		}
+
+		case SC_Read:
+		{
+			Read();
 			break;
 		}
 

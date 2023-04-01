@@ -7,11 +7,13 @@ int main(int argc, char *argv[])
     OpenFileId id;
 
     Connect(fd1, "127.0.0.1", 12345);
-    Send(fd1, "hello anh em", 15);
-    Write("hello anh em", 15, fd1);
-
+    Read("hello", 15, fd1);
+    Write(buffer, 15, fd1);
+    PrintString(buffer);
     id = Open("input.txt", 1);
-    Write("hix", 3, id);
+    Read(buffer, 15, id);
+    PrintString(buffer);
+    Write("hix1", 10, id);
 
     Halt();
     return 0;

@@ -35,6 +35,7 @@
 #define SC_ThreadExit   14
 #define SC_ThreadJoin   15
 
+#define SC_PrintString 41
 #define SC_Add		42
 #define SC_Test     43
 #define SC_readString 44
@@ -189,6 +190,7 @@ int SocketTCP();
 int Connect(int socketid, char *ip, int port);
 int Send(int socketid, char *buffer, int len);
 int Receive(int socketid, char *buffer, int len);
+int PrintString(char* buffer);
 
 #endif /* IN_ASM */
 

@@ -52,4 +52,32 @@ bool readFromMem(char* buffer, int size, int virAddr) {
     return true;
 }
 
+bool writeToMem(char* buffer, int size, int virAddr) {
+    int count = 0;
+    // memcpy(kernel->machine->mainMemory + virAddr, buffer, size);
+    int data = 0;
+    while (size >= 4) {
+        memcpy(&data, buffer + count, 4);
+        if (!kernel->machine->WriteMem(virAddr + count, 4, data))
+            return false;
+        size -= 4;
+        count += 4;
+    }
+    while (size >= 2) {
+        memcpy(&data, buffer + count, 2);
+        if (!kernel->machine->WriteMem(virAddr + count, 2, data))
+            return false;
+        size -= 2;
+        count += 2;
+    }
+    while (size >= 1) {
+        memcpy(&data, buffer + count, 1);
+        if (!kernel->machine->WriteMem(virAddr + count, 1, data))
+            return false;
+        size -= 1;
+        count += 1;
+    }
+    delete buffer;
+    return true;
+}
 #endif /* ! __USERPROG_KSYSCALL_H__ */
