@@ -112,7 +112,7 @@ ifeq ($(hosttype),unknown)
 PROGRAMS = unknownhost
 else
 # change this if you create a new test program!
-PROGRAMS = add halt shell matmult sort segments createfile openfile test delete TestClient cat copy concat
+PROGRAMS = add halt shell matmult sort segments createfile openfile test delete TestClient cat copy concat file_transfer
 endif
 
 all: $(PROGRAMS)
@@ -213,6 +213,12 @@ copy: copy.o start.o
 concat: concat.o start.o
 	$(LD) $(LDFLAGS) start.o concat.o -o concat.coff
 	$(COFF2NOFF) concat.coff concat
+
+	file_transfer.o: file_transfer.c
+	$(CC) $(CFLAGS) -c file_transfer.c
+file_transfer: file_transfer.o start.o
+	$(LD) $(LDFLAGS) start.o file_transfer.o -o file_transfer.coff
+	$(COFF2NOFF) file_transfer.coff file_transfer
 
 unknownhost:
 	@echo Host type could not be determined.

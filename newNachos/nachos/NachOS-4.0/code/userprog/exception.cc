@@ -175,7 +175,7 @@ int Connect()
 
 	int iRetval = -1;
 	struct sockaddr_in remote = {0};
-	remote.sin_addr.s_addr = inet_addr("127.0.0.1");
+	remote.sin_addr.s_addr = inet_addr(Ip);
 	remote.sin_family = AF_INET;
 	remote.sin_port = htons(ServerPort);
 	iRetval = connect(list[socketid].socket, (struct sockaddr *)&remote, sizeof(struct sockaddr_in));
@@ -263,9 +263,7 @@ void Open()
 	list[posfree].flag = OPENFILE;
 	if (list[posfree].Fileid && posfree < 20)
 	{
-		cout << "open success" << endl;
 		kernel->machine->WriteRegister(2, posfree);
-		//	cout << "\n" << posfree <<"\n" ;
 		countPosFree();
 	}
 	else
