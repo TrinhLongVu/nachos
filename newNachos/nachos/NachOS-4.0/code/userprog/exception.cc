@@ -383,6 +383,25 @@ void write()
 	}
 }
 
+void seek()
+{
+	int offset = kernel->machine->ReadRegister(4);
+	int openfileId = kernel->machine->ReadRegister(5);
+	if (list[openfileId].Fileid != 0 && list[openfileId].typeFile == READ_WRITE)
+	{
+
+		int result = list[openfileId].Fileid->getCurOffset();
+		if ( offset == result)
+		{
+			kernel->machine->WriteRegister(2, result);
+		}
+		else
+		{
+			kernel->machine->WriteRegister(2, -1);
+		}
+	}
+}
+
 void Remove()
 {
 	DEBUG(dbgSys, "Create a file.");

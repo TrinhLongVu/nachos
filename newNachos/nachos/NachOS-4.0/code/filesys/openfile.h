@@ -24,6 +24,7 @@
 #include "utility.h"
 #include "sysdep.h"
 
+#define FILESYS_STUB
 #ifdef FILESYS_STUB			// Temporarily implement calls to 
 					// Nachos file system as calls to UNIX!
 					// See definitions listed under #else
@@ -54,6 +55,10 @@ class OpenFile {
 
     int Length() { Lseek(file, 0, 2); return Tell(file); }
     
+	int getCurOffset()
+	{
+		return this->currentOffset;
+	}
   private:
     int file;
     int currentOffset;
@@ -81,11 +86,13 @@ class OpenFile {
     					// Read/write bytes from the file,
 					// bypassing the implicit position.
     int WriteAt(char *from, int numBytes, int position);
-
+	
     int Length(); 			// Return the number of bytes in the
 					// file (this interface is simpler 
 					// than the UNIX idiom -- lseek to 
 					// end of file, tell, lseek back 
+
+	
     
   private:
     FileHeader *hdr;			// Header for this file 

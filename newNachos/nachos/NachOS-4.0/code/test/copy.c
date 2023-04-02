@@ -7,7 +7,7 @@ int main(){
     id1 =  Open("test.txt",1);
    
     Read(buffer,10,id1);
-    PrintString(buffer);
+    //PrintString(buffer);
     id2 = Open("test1.txt",1);
     Write(buffer, 10, id2);
      //PrintString(buffer);
