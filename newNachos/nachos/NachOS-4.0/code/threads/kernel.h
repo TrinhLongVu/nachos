@@ -24,6 +24,10 @@ class PostOfficeOutput;
 class SynchConsoleInput;
 class SynchConsoleOutput;
 class SynchDisk;
+class Semaphore;
+#include "bitmap.h"
+#include "stable.h"
+#include "ptable.h"
 
 class Kernel {
   public:
@@ -56,6 +60,11 @@ class Kernel {
     FileSystem *fileSystem;     
     PostOfficeInput *postOfficeIn;
     PostOfficeOutput *postOfficeOut;
+
+    Semaphore *addrLock;
+    Bitmap *gPhysPageBitMap;
+    STable *semTab;
+    PTable *pTab;
 
     int hostName;               // machine identifier
 
