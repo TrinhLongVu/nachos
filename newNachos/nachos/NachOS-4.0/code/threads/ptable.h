@@ -13,8 +13,8 @@ private:
     int psize;
     Semaphore* bmsem;
 public:
-    PTable(int size){};
-    ~PTable(){};
+    PTable(int size);
+    ~PTable();
     int ExecUpdate(char *name);
     int ExitUpdate(int ec);
     int JoinUpdate(int id);

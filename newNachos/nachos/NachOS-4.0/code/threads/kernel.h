@@ -35,7 +35,7 @@ class Kernel {
     				// Interpret command line arguments
     ~Kernel();		        // deallocate the kernel
     
-    void Initialize(); 		// initialize the kernel -- separated
+    void Initialize(char *userProgName = NULL);  		// initialize the kernel -- separated
 				// from constructor because 
 				// refers to "kernel" as a global
 

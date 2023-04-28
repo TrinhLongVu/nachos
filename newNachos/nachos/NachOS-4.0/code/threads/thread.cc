@@ -33,8 +33,9 @@ const int STACK_FENCEPOST = 0xdedbeef;
 //	"threadName" is an arbitrary string, useful for debugging.
 //----------------------------------------------------------------------
 
-Thread::Thread(char* threadName)
+Thread::Thread(char *threadName, bool _has_dynamic_name /*=false*/) 
 {
+    has_dynamic_name = _has_dynamic_name;
     name = threadName;
     stackTop = NULL;
     stack = NULL;
@@ -45,6 +46,7 @@ Thread::Thread(char* threadName)
 					// of machine registers
     }
     space = NULL;
+    if (has_dynamic_name) delete[] name;
 }
 
 //----------------------------------------------------------------------

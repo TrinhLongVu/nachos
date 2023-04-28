@@ -1,3 +1,8 @@
+#ifndef SEM_H
+#define SEM_H
+
+class Semaphore;
+
 class Sem{
 private:
     char name[50];
@@ -12,3 +17,5 @@ public:
 
     char* GetName();
 };
+
+#endif
