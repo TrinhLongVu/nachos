@@ -412,6 +412,45 @@ void Remove()
 		kernel->machine->WriteRegister(2, -1);
 }
 
+void Exec() 
+{
+	int virtAddr = kernel->machine->ReadRegister(4); 
+	char *name = new char[50];
+	bzero(name, 50);
+	readFromMem(name, 50, virtAddr);
+
+	if (name == NULL) {
+        DEBUG(dbgSys, "\n Not enough memory in System");
+        ASSERT(false);
+        kernel->machine->WriteRegister(2, -1);
+        return ;
+    }
+
+	OpenFile* file = kernel->fileSystem->Open(name);
+    if (file == NULL) {
+        DEBUG(dbgSys, "\nExec:: Can't open this file.");
+        kernel->machine->WriteRegister(2, -1);
+    }
+    delete file;
+
+    // Return child process id
+    kernel->machine->WriteRegister(2,  kernel->pTab->ExecUpdate(name));
+
+	return;
+}
+
+void Join()
+{
+	int id = kernel->machine->ReadRegister(4);
+	kernel->machine->WriteRegister(2, kernel->pTab->JoinUpdate(id));
+}
+
+void Exit()
+{
+	int id = kernel->machine->ReadRegister(4);
+	kernel->machine->WriteRegister(2, kernel->pTab->ExitUpdate(id));
+}
+
 void ExceptionHandler(ExceptionType which)
 {
 	int type = kernel->machine->ReadRegister(2);
@@ -502,7 +541,27 @@ void ExceptionHandler(ExceptionType which)
 
 		case SC_Test:
 		{
+
 		}
+
+		case SC_Exec:
+		{
+			Exec();
+			break;
+		}
+
+		case SC_Join:
+		{
+			Join();
+			break;
+		}
+
+		case SC_Exit:
+		{
+			Exit();
+			break;
+		}
+
 		default:
 		{
 			cerr << "Unexpected system call " << type << "\n";
