@@ -10,7 +10,5 @@ int main()
     PrintString(buffer);
     PrintString("\n");
     Close(id);
-    Halt();
-
     return 0;
 } 

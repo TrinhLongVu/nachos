@@ -13,6 +13,5 @@ int main(){
      //PrintString(buffer);
     Close(id1);
     Close(id2);
-    Halt();
     return 0;
 }
