@@ -1,10 +1,12 @@
 #include "synch.h"
 #include "ptable.h"
 
-PTable::PTable(int size) {
+PTable::PTable(int size)
+{
     int i;
     psize = size;
-    for (i = 0; i < size; i++) {
+    for (i = 0; i < size; i++)
+    {
         pcb[i] = NULL;
     }
     bmsem = new Semaphore("bmsem", 1);
@@ -12,29 +14,35 @@ PTable::PTable(int size) {
     pcb[0]->parentID = -1;
 }
 
-PTable::~PTable() {
+PTable::~PTable()
+{
     int i;
-    for (i = 0; i < psize; i++) {
-        if (!pcb[i]) delete pcb[i];
+    for (i = 0; i < psize; i++)
+    {
+        if (!pcb[i])
+            delete pcb[i];
     }
     delete bmsem;
 }
 
-int PTable::ExecUpdate(char* name) {
+int PTable::ExecUpdate(char *name)
+{
     // Gọi mutex->P(); để giúp tránh tình trạng nạp 2 tiến trình cùng 1 lúc.
     bmsem->P();
 
     // Kiểm tra tính hợp lệ của chương trình “name”.
     // Kiểm tra sự tồn tại của chương trình “name” bằng cách gọi phương thức
     // Open của lớp fileSystem.
-    if (name == NULL) {
+    if (name == NULL)
+    {
         DEBUG(dbgSys, "\nPTable::Exec : Can't not execute name is NULL.\n");
         bmsem->V();
         return -1;
     }
     // So sánh tên chương trình và tên của currentThread để chắc chắn rằng
     // chương trình này không gọi thực thi chính nó.
-    if (strcmp(name, kernel->currentThread->getName()) == 0) {
+    if (strcmp(name, "scheduler") == 0 || strcmp(name, kernel->currentThread->getName()) == 0)
+    {
         DEBUG(dbgSys, "\nPTable::Exec : Can't not execute itself.\n");
         bmsem->V();
         return -1;
@@ -44,7 +52,8 @@ int PTable::ExecUpdate(char* name) {
     int index = this->GetFreeSlot();
 
     // Check if have free slot
-    if (index < 0) {
+    if (index < 0)
+    {
         DEBUG(dbgSys, "\nPTable::Exec :There is no free slot.\n");
         bmsem->V();
         return -1;
@@ -67,16 +76,19 @@ int PTable::ExecUpdate(char* name) {
     return pid;
 }
 
-int PTable::ExitUpdate(int exitcode) {
+int PTable::ExitUpdate(int exitcode)
+{
     // Nếu tiến trình gọi là main process thì gọi Halt().
     int id = kernel->currentThread->processID;
-    if (id == 0) {
+    if (id == 0)
+    {
         kernel->currentThread->FreeSpace();
         kernel->interrupt->Halt();
         return 0;
     }
 
-    if (!IsExist(id)) {
+    if (!IsExist(id))
+    {
         DEBUG(dbgSys, "Process " << id << " is not exist.");
         return -1;
     }
@@ -94,12 +106,14 @@ int PTable::ExitUpdate(int exitcode) {
     return exitcode;
 }
 
-int PTable::JoinUpdate(int id) {
+int PTable::JoinUpdate(int id)
+{
     // Ta kiểm tra tính hợp lệ của processID id và kiểm tra tiến trình gọi Join
     // có phải là cha của tiến trình có processID là id hay không. Nếu không
     // thỏa, ta báo lỗi hợp lý và trả về -1.
     if (id < 0 || id >= psize || pcb[id] == NULL ||
-        pcb[id]->parentID != kernel->currentThread->processID) {
+        pcb[id]->parentID != kernel->currentThread->processID)
+    {
         DEBUG(dbgSys, "\nPTable::Join : Can't not join.\n");
         return -1;
     }
@@ -117,21 +131,26 @@ int PTable::JoinUpdate(int id) {
     return exit_code;
 }
 
-int PTable::GetFreeSlot() {
+int PTable::GetFreeSlot()
+{
     int i;
-    for (i = 0; i < psize; i++) {
-        if (!pcb[i]) return i;
+    for (i = 0; i < psize; i++)
+    {
+        if (!pcb[i])
+            return i;
     }
     return -1;
 }
 
 bool PTable::IsExist(int pid) { return pcb[pid] != NULL; }
 
-void PTable::Remove(int pid) {
-    if (pcb[pid] != NULL) {
+void PTable::Remove(int pid)
+{
+    if (pcb[pid] != NULL)
+    {
         delete pcb[pid];
         pcb[pid] = NULL;
     }
 }
 
-char* PTable::GetFileName(int id) { return pcb[id]->GetFileName(); }
+char *PTable::GetFileName(int id) { return pcb[id]->GetFileName(); }

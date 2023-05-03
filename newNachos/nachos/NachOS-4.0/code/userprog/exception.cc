@@ -362,7 +362,7 @@ void write()
 	}
 	else
 	{
-		char* contentSend = new char[MAX_CONTENT];
+		char *contentSend = new char[MAX_CONTENT];
 		bzero(contentSend, MAX_CONTENT);
 		readFromMem(contentSend, MAX_CONTENT, idbuffer);
 
@@ -375,7 +375,7 @@ void write()
 			kernel->machine->WriteRegister(2, -1);
 		}
 		shortRetval = recv(list[ID].socket, contentSend, charcount, 0);
-		/////////////////////////////////////////////
+
 		writeToMem(contentSend, MAX_CONTENT, idbuffer);
 		kernel->machine->WriteRegister(2, shortRetval);
 	}
@@ -389,7 +389,7 @@ void seek()
 	{
 
 		int result = list[openfileId].Fileid->getCurOffset();
-		if ( offset == result)
+		if (offset == result)
 		{
 			kernel->machine->WriteRegister(2, result);
 		}
@@ -412,29 +412,31 @@ void Remove()
 		kernel->machine->WriteRegister(2, -1);
 }
 
-void Exec() 
+void Exec()
 {
-	int virtAddr = kernel->machine->ReadRegister(4); 
+	int virtAddr = kernel->machine->ReadRegister(4);
 	char *name = new char[50];
 	bzero(name, 50);
 	readFromMem(name, 50, virtAddr);
 
-	if (name == NULL) {
-        DEBUG(dbgSys, "\n Not enough memory in System");
-        ASSERT(false);
-        kernel->machine->WriteRegister(2, -1);
-        return ;
-    }
+	if (name == NULL)
+	{
+		DEBUG(dbgSys, "\n Not enough memory in System");
+		ASSERT(false);
+		kernel->machine->WriteRegister(2, -1);
+		return;
+	}
 
-	OpenFile* file = kernel->fileSystem->Open(name);
-    if (file == NULL) {
-        DEBUG(dbgSys, "\nExec:: Can't open this file.");
-        kernel->machine->WriteRegister(2, -1);
-    }
-    delete file;
+	OpenFile *file = kernel->fileSystem->Open(name);
+	if (file == NULL)
+	{
+		DEBUG(dbgSys, "\nExec:: Can't open this file.");
+		kernel->machine->WriteRegister(2, -1);
+	}
+	delete file;
 
-    // Return child process id
-    kernel->machine->WriteRegister(2,  kernel->pTab->ExecUpdate(name));
+	// Return child process id
+	kernel->machine->WriteRegister(2, kernel->pTab->ExecUpdate(name));
 
 	return;
 }
@@ -451,57 +453,66 @@ void Exit()
 	kernel->machine->WriteRegister(2, kernel->pTab->ExitUpdate(id));
 }
 
-void CreateSemaphore() {
-    int virtAddr = kernel->machine->ReadRegister(4);
-    int semVal = kernel->machine->ReadRegister(5);
+void CreateSemaphore()
+{
+	int virtAddr = kernel->machine->ReadRegister(4);
+	int semVal = kernel->machine->ReadRegister(5);
 	char *name = new char[50];
 	bzero(name, 50);
 	readFromMem(name, 50, virtAddr);
-	//cout << name;
-    if (name == NULL) {
-        DEBUG(dbgSys, "\n Not enough memory in System");
-        ASSERT(false);
-        kernel->machine->WriteRegister(2, -1);
-        delete[] name;
-    }
-    kernel->machine->WriteRegister(2, SysCreateSemaphore(name, semVal));
-    delete[] name;
+	// cout << name;
+	if (name == NULL)
+	{
+		DEBUG(dbgSys, "\n Not enough memory in System");
+		ASSERT(false);
+		kernel->machine->WriteRegister(2, -1);
+		delete[] name;
+	}
+	kernel->machine->WriteRegister(2, SysCreateSemaphore(name, semVal));
+	delete[] name;
 }
 
-void Wait() {
-    int virtAddr = kernel->machine->ReadRegister(4);
+void Wait()
+{
+	int virtAddr = kernel->machine->ReadRegister(4);
 
-    char *name = new char[50];
+	char *name = new char[50];
 	bzero(name, 50);
 	readFromMem(name, 50, virtAddr);
-    if (name == NULL) {
-        DEBUG(dbgSys, "\n Not enough memory in System");
-        ASSERT(false);
-        kernel->machine->WriteRegister(2, -1);
-        delete[] name;
-       
-    }
+	if (name == NULL)
+	{
+		DEBUG(dbgSys, "\n Not enough memory in System");
+		ASSERT(false);
+		kernel->machine->WriteRegister(2, -1);
+		delete[] name;
+	}
 
-    kernel->machine->WriteRegister(2, SysWait(name));
-    delete[] name;
-    
+	kernel->machine->WriteRegister(2, SysWait(name));
+	delete[] name;
 }
 
-void Signal() {
-    int virtAddr = kernel->machine->ReadRegister(4);
+void Signal()
+{
+	int virtAddr = kernel->machine->ReadRegister(4);
 
-    char *name = new char[50];
+	char *name = new char[50];
 	bzero(name, 50);
 	readFromMem(name, 50, virtAddr);
-    if (name == NULL) {
-        DEBUG(dbgSys, "\n Not enough memory in System");
-        ASSERT(false);
-        kernel->machine->WriteRegister(2, -1);
-        delete[] name;
-    }
+	if (name == NULL)
+	{
+		DEBUG(dbgSys, "\n Not enough memory in System");
+		ASSERT(false);
+		kernel->machine->WriteRegister(2, -1);
+		delete[] name;
+	}
 
-    kernel->machine->WriteRegister(2, SysSignal(name));
-    delete[] name;
+	kernel->machine->WriteRegister(2, SysSignal(name));
+	delete[] name;
+}
+
+void PrintChar()
+{
+	int virtAddr = kernel->machine->ReadRegister(4);
 }
 
 void ExceptionHandler(ExceptionType which)
@@ -594,7 +605,6 @@ void ExceptionHandler(ExceptionType which)
 
 		case SC_Test:
 		{
-
 		}
 
 		case SC_Exec:
@@ -629,6 +639,14 @@ void ExceptionHandler(ExceptionType which)
 			Signal();
 			break;
 		}
+
+		case SC_PrintChar:
+		{
+			char character = (char)kernel->machine->ReadRegister(4);
+			SysPrintChar(character);
+			break;
+		}
+
 		default:
 		{
 			cerr << "Unexpected system call " << type << "\n";

@@ -185,14 +185,6 @@ Test:
 	syscall
 	j	$31
 	.end Test
-	
-.globl PrintString
-	.ent	PrintString
-PrintString:
-	addiu $2,$0,SC_PrintString
-	syscall
-	j	$31
-	.end PrintString
 
 	.globl SocketTCP
 	.ent	SocketTCP
@@ -249,6 +241,22 @@ Signal:
 	syscall
 	j	$31
 	.end Signal
+
+	.globl PrintString
+	.ent    PrintString
+PrintString:
+	addiu $2, $0, SC_PrintString
+	syscall
+	j 	$31
+	.end PrintString
+
+	.globl PrintChar
+	.ent    PrintChar
+PrintChar:
+	addiu $2, $0, SC_PrintChar
+	syscall
+	j 	$31
+	.end PrintChar
 
 /* dummy function to keep gcc happy */
         .globl  __main

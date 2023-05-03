@@ -2,6 +2,10 @@
 
 int main(int argc, char *argv[])
 {
-    Exec("copy");
+    int id1, id2;
+    // id1 = Exec("cat");
+    // id2 = Exec("copy");
+    Join(id1);
+    Join(id2);
     return 0;
 }

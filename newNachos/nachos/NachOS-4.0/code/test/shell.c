@@ -4,12 +4,27 @@ int main()
 {
     SpaceId newProc1;
     SpaceId newProc2;
+    int check;
 
-    newProc1 = Exec("copy");  // Project 01
-    newProc2 = Exec("cat"); // Project 01
+    if (CreateSemaphore("main", 0) == 0)
+    {
+        PrintString("oke");
+    }
+    if (CreateSemaphore("copy", 0) == 0)
+    {
+        PrintString("oke");
+    }
+    if (CreateSemaphore("cat", 0) == 0)
+    {
+        PrintString("oke");
+    }       
 
+    newProc1 = Exec("cat");  // Project 01
     Join(newProc1);
+
+    newProc2 = Exec("copy"); // Project 01
     Join(newProc2);
+
 
     // SpaceId newProc;
     // OpenFileId input = _ConsoleInput;

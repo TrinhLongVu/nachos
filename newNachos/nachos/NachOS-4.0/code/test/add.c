@@ -10,10 +10,15 @@
 int
 main()
 {
-  int result;
+  // int result;
   
-  result = Add(42, 23);
+  // result = Add(42, 23);
 
-  Halt();
+  // Halt();
   /* not reached */
+
+  int i;
+    for(i = 0; i < 100; i++){
+        PrintChar('B');
+    }
 }

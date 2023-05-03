@@ -46,6 +46,8 @@
 #define SC_CreateSemaphore 51
 #define SC_Wait 52
 #define SC_Signal 53
+#define SC_PrintChar 54
+
 #ifndef IN_ASM
 
 
@@ -197,6 +199,8 @@ int PrintString(char* buffer);
 int CreateSemaphore(char *name, int semval);
 int Wait(char *name);
 int Signal(char *name);
+int PrintChar(char x);
+
 #endif /* IN_ASM */
 
 #endif /* SYSCALL_H */
