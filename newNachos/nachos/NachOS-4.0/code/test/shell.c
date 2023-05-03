@@ -2,54 +2,9 @@
 
 int main()
 {
-    SpaceId newProc1;
-    SpaceId newProc2;
-    int check;
-
-    if (CreateSemaphore("main", 0) == 0)
-    {
-        PrintString("oke");
-    }
-    if (CreateSemaphore("copy", 0) == 0)
-    {
-        PrintString("oke");
-    }
-    if (CreateSemaphore("cat", 0) == 0)
-    {
-        PrintString("oke");
-    }       
-
-    newProc1 = Exec("cat");  // Project 01
-    Join(newProc1);
-
-    newProc2 = Exec("copy"); // Project 01
-    Join(newProc2);
-
-
-    // SpaceId newProc;
-    // OpenFileId input = _ConsoleInput;
-    // OpenFileId output = _ConsoleOutput;
-    // char prompt[2], ch, buffer[60];
-    // int i;
-
-    // prompt[0] = '-';
-    // prompt[1] = '-';
-
-    // while (1) {
-    //     Write(prompt, 2, output);
-
-    //     i = 0;
-
-    //     do {
-    //         Read(&buffer[i], 1, input);
-
-    //     } while (buffer[i++] != '\n');
-
-    //     buffer[--i] = '\0';
-
-    //     if (i > 0) {
-    //         newProc = Exec(buffer);
-    //         Join(newProc);
-    //     }
-    // }
+    SpaceId id1, id2;
+    id1 = Exec("cat");
+    id2 = Exec("copy");
+    Join(id1);
+    Join(id2);
 }
