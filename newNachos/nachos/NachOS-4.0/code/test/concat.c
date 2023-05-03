@@ -15,8 +15,8 @@ int main(){
     Write(buffer1,10, id3);
    
     Read(buffer2, 10, id2);
-    
     Write(buffer2, 10 ,id3);
+    
     Close(id1);
     Close(id2);
     Close(id3);

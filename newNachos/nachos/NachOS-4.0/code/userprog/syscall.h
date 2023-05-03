@@ -43,6 +43,9 @@
 #define SC_Connect 46
 #define SC_Send 47
 #define SC_Receive 48
+#define SC_CreateSemaphore 51
+#define SC_Wait 52
+#define SC_Signal 53
 #ifndef IN_ASM
 
 
@@ -191,7 +194,9 @@ int Connect(int socketid, char *ip, int port);
 int Send(int socketid, char *buffer, int len);
 int Receive(int socketid, char *buffer, int len);
 int PrintString(char* buffer);
-
+int CreateSemaphore(char *name, int semval);
+int Wait(char *name);
+int Signal(char *name);
 #endif /* IN_ASM */
 
 #endif /* SYSCALL_H */

@@ -15,6 +15,6 @@ public:
     int Create(char* name, int init);
     int Wait(char* name);
     int Signal(char* name);
-    int FindFreeSlot(int id);
+    int FindFreeSlot();
 };  
 #endif

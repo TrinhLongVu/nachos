@@ -1,35 +1,40 @@
 #include "syscall.h"
 
-int
-main()
+int main()
 {
-    SpaceId newProc;
-    OpenFileId input = ConsoleInput;
-    OpenFileId output = ConsoleOutput;
-    char prompt[2], ch, buffer[60];
-    int i;
+    SpaceId newProc1;
+    SpaceId newProc2;
 
-    prompt[0] = '-';
-    prompt[1] = '-';
+    newProc1 = Exec("copy");  // Project 01
+    newProc2 = Exec("cat"); // Project 01
 
-    while( 1 )
-    {
-	Write(prompt, 2, output);
+    Join(newProc1);
+    Join(newProc2);
 
-	i = 0;
-	
-	do {
-	
-	    Read(&buffer[i], 1, input); 
+    // SpaceId newProc;
+    // OpenFileId input = _ConsoleInput;
+    // OpenFileId output = _ConsoleOutput;
+    // char prompt[2], ch, buffer[60];
+    // int i;
 
-	} while( buffer[i++] != '\n' );
+    // prompt[0] = '-';
+    // prompt[1] = '-';
 
-	buffer[--i] = '\0';
+    // while (1) {
+    //     Write(prompt, 2, output);
 
-	if( i > 0 ) {
-		newProc = Exec(buffer);
-		Join(newProc);
-	}
-    }
+    //     i = 0;
+
+    //     do {
+    //         Read(&buffer[i], 1, input);
+
+    //     } while (buffer[i++] != '\n');
+
+    //     buffer[--i] = '\0';
+
+    //     if (i > 0) {
+    //         newProc = Exec(buffer);
+    //         Join(newProc);
+    //     }
+    // }
 }
-

@@ -451,6 +451,59 @@ void Exit()
 	kernel->machine->WriteRegister(2, kernel->pTab->ExitUpdate(id));
 }
 
+void CreateSemaphore() {
+    int virtAddr = kernel->machine->ReadRegister(4);
+    int semVal = kernel->machine->ReadRegister(5);
+	char *name = new char[50];
+	bzero(name, 50);
+	readFromMem(name, 50, virtAddr);
+	//cout << name;
+    if (name == NULL) {
+        DEBUG(dbgSys, "\n Not enough memory in System");
+        ASSERT(false);
+        kernel->machine->WriteRegister(2, -1);
+        delete[] name;
+    }
+    kernel->machine->WriteRegister(2, SysCreateSemaphore(name, semVal));
+    delete[] name;
+}
+
+void Wait() {
+    int virtAddr = kernel->machine->ReadRegister(4);
+
+    char *name = new char[50];
+	bzero(name, 50);
+	readFromMem(name, 50, virtAddr);
+    if (name == NULL) {
+        DEBUG(dbgSys, "\n Not enough memory in System");
+        ASSERT(false);
+        kernel->machine->WriteRegister(2, -1);
+        delete[] name;
+       
+    }
+
+    kernel->machine->WriteRegister(2, SysWait(name));
+    delete[] name;
+    
+}
+
+void Signal() {
+    int virtAddr = kernel->machine->ReadRegister(4);
+
+    char *name = new char[50];
+	bzero(name, 50);
+	readFromMem(name, 50, virtAddr);
+    if (name == NULL) {
+        DEBUG(dbgSys, "\n Not enough memory in System");
+        ASSERT(false);
+        kernel->machine->WriteRegister(2, -1);
+        delete[] name;
+    }
+
+    kernel->machine->WriteRegister(2, SysSignal(name));
+    delete[] name;
+}
+
 void ExceptionHandler(ExceptionType which)
 {
 	int type = kernel->machine->ReadRegister(2);
@@ -561,7 +614,21 @@ void ExceptionHandler(ExceptionType which)
 			Exit();
 			break;
 		}
-
+		case SC_CreateSemaphore:
+		{
+			CreateSemaphore();
+			break;
+		}
+		case SC_Wait:
+		{
+			Wait();
+			break;
+		}
+		case SC_Signal:
+		{
+			Signal();
+			break;
+		}
 		default:
 		{
 			cerr << "Unexpected system call " << type << "\n";
