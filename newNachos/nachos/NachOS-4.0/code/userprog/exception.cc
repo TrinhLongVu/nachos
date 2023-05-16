@@ -605,6 +605,16 @@ void ExceptionHandler(ExceptionType which)
 
 		case SC_Test:
 		{
+			char** argv12 = new char*[100];
+			for(int i = 0; i < 100; i++) {
+				argv12[i] = new char[100];
+			}
+			argv12[0] = "test";
+			argv12[1] = "123244";
+			int id = kernel->pTab->ExecVUpdate(2, argv12);
+			kernel->pTab->JoinUpdate(id);
+			delete []argv12;
+			break;
 		}
 
 		case SC_Exec:

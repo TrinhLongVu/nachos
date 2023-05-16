@@ -16,6 +16,7 @@ public:
     PTable(int size);
     ~PTable();
     int ExecUpdate(char *name);
+    int ExecVUpdate(int argc, char** argv);
     int ExitUpdate(int ec);
     int JoinUpdate(int id);
     int GetFreeSlot();

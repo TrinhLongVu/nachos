@@ -21,6 +21,8 @@ public:
     ~PCB();
 
     int Exec(char *filename, int pid);
+    int ExecV(int argc, char** argv, int id);
+
     int GetID();
     int GetNumWait();
 

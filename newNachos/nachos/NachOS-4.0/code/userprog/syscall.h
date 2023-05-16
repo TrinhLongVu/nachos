@@ -123,7 +123,7 @@ typedef int OpenFileId;
 #define _ConsoleInput	0 // the same name of the class in file console.h  
 #define _ConsoleOutput	1  
  
-int Test(char *buffer, int charcount, OpenFileId id);
+int Test();
 /* Create a Nachos file, with name "name" */
 /* Note: Create does not open the file.   */
 /* Return 1 on success, negative error code on failure */

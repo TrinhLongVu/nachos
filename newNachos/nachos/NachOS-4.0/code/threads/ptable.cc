@@ -76,6 +76,52 @@ int PTable::ExecUpdate(char *name)
     return pid;
 }
 
+int PTable::ExecVUpdate(int argc, char **argv)
+{
+    bmsem->P();
+
+    char* name = argv[0];
+    
+    if (name == NULL)
+    {
+        DEBUG(dbgSys, "\nPTable::Exec : Can't not execute name is NULL.\n");
+        bmsem->V();
+        return -1;
+    }
+    // So sánh tên chương trình và tên của currentThread để chắc chắn rằng
+    // chương trình này không gọi thực thi chính nó.
+    if (strcmp(name, "scheduler") == 0 || strcmp(name, kernel->currentThread->getName()) == 0)
+    {
+        DEBUG(dbgSys, "\nPTable::Exec : Can't not execute itself.\n");
+        bmsem->V();
+        return -1;
+    }
+
+    // Tìm slot trống trong bảng Ptable.
+    int index = this->GetFreeSlot();
+
+    // Check if have free slot
+    if (index < 0)
+    {
+        DEBUG(dbgSys, "\nPTable::Exec :There is no free slot.\n");
+        bmsem->V();
+        return -1;
+    }
+
+    // Nếu có slot trống thì khởi tạo một PCB mới với processID chính là index
+    // của slot này
+    pcb[index] = new PCB(index);
+    pcb[index]->SetFileName(name);
+
+    // parrentID là processID của currentThread
+    pcb[index]->parentID = kernel->currentThread->processID;
+
+    // Gọi thực thi phương thức Exec của lớp PCB.
+    int pid = pcb[index]->ExecV(argc, argv, index);
+    bmsem->V();
+    return pid;
+}
+
 int PTable::ExitUpdate(int exitcode)
 {
     // Nếu tiến trình gọi là main process thì gọi Halt().

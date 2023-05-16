@@ -109,6 +109,7 @@ class Thread {
     char* getName() { return (name); }
     void Print() { cout << name; }
     void SelfTest();		// test whether thread impl is working
+    int *getStack(int* st) {stack = st;}
 
   private:
     // some of the private data for this class is listed above
