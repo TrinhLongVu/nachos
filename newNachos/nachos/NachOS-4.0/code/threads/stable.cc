@@ -23,7 +23,7 @@ STable::~STable() {
 }
 
 int STable::Create(char* name,
-                   int init) {  // Check da ton tai semaphore nay chua?
+                   int init) { 
     for (int i = 0; i < MAX_SEMAPHORE; i++) {
         if (bm->Test(i)) {
             if (strcmp(name, semTab[i]->GetName()) == 0) {
@@ -31,27 +31,20 @@ int STable::Create(char* name,
             }
         }
     }
-    // Tim slot tren bang semTab trong
-    int id = this->FindFreeSlot();
+    int id = this->slot();
 
-    // Neu k tim thay thi tra ve -1
     if (id < 0) {
         return -1;
     }
 
-    // Neu tim thay slot trong thi nap Semaphore vao semTab[id]
     this->semTab[id] = new Sem(name, init);
     return 0;
 }
 
 int STable::Wait(char* name) {
     for (int i = 0; i < MAX_SEMAPHORE; i++) {
-        // Kiem tra o thu i da duoc nap semaphore chua
         if (bm->Test(i)) {
-            // Neu co thi tien hanh so sanh name voi name cua semaphore trong
-            // semTab
             if (strcmp(name, semTab[i]->GetName()) == 0) {
-                // Neu ton tai thi cho semaphore down();
                 semTab[i]->wait();
                 return 0;
             }
@@ -63,12 +56,8 @@ int STable::Wait(char* name) {
 
 int STable::Signal(char* name) {
     for (int i = 0; i < MAX_SEMAPHORE; i++) {
-        // Kiem tra o thu i da duoc nap semaphore chua
         if (bm->Test(i)) {
-            // Neu co thi tien hanh so sanh name voi name cua semaphore trong
-            // semTab
             if (strcmp(name, semTab[i]->GetName()) == 0) {
-                // Neu ton tai thi cho semaphore up();
                 semTab[i]->signal();
                 return 0;
             }
@@ -78,4 +67,4 @@ int STable::Signal(char* name) {
     return -1;
 }
 
-int STable::FindFreeSlot() { return this->bm->FindAndSet(); }
+int STable::slot() { return this->bm->FindAndSet(); }

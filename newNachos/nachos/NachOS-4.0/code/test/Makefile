@@ -212,7 +212,7 @@ copy: copy.o start.o
 	$(CC) $(CFLAGS) -c concat.c
 concat: concat.o start.o
 	$(LD) $(LDFLAGS) start.o concat.o -o concat.coff
-	$(COFF2NOFF) concat.coff concat	
+	$(COFF2NOFF) concat.coff concat
 
 	file_transfer.o: file_transfer.c
 	$(CC) $(CFLAGS) -c file_transfer.c

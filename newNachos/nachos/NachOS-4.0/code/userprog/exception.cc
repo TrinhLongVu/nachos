@@ -31,6 +31,7 @@
 #include <unistd.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
+#include <cstring>  // For strlen
 #include "openfile.h"
 
 //----------------------------------------------------------------------
@@ -436,7 +437,8 @@ void Exec()
 	delete file;
 
 	// Return child process id
-	kernel->machine->WriteRegister(2, kernel->pTab->ExecUpdate(name));
+	int pid = kernel->pTab->ExecUpdate(name);
+	kernel->machine->WriteRegister(2, pid);
 
 	return;
 }
@@ -514,6 +516,56 @@ void PrintChar()
 {
 	int virtAddr = kernel->machine->ReadRegister(4);
 }
+
+void Argc()
+{
+	kernel->machine->WriteRegister(2, kernel->currentThread->getArgc);
+	cout << kernel->currentThread->getArgc;
+}
+
+int storeMem(char** argv, int argc) {
+    if (argv == NULL || argc == 0)
+        return 0;
+    
+    int vir_stack = kernel->machine->ReadRegister(StackReg);
+    
+    // Allocate memory for the array of pointers
+    int pointersSize = argc * sizeof(char*);
+    char** argvCopy = new char*[argc];
+
+    // Write the array of pointers to memory
+    kernel->machine->WriteMem(vir_stack, pointersSize, reinterpret_cast<int>(argvCopy));
+
+    // Write each string to memory and update the pointers
+    int stringStartAddr = vir_stack + pointersSize;
+    for (int i = 0; i < argc; i++) {
+        const char* str = argv[i];
+        int strLength = strlen(str) + 1;  // Include null terminator
+
+        // Allocate memory for the string and copy it to memory
+        kernel->machine->WriteMem(vir_stack + i * sizeof(char*), sizeof(char*), stringStartAddr);
+        kernel->machine->WriteMem(stringStartAddr, strLength, reinterpret_cast<int>(str));
+
+        // Update the pointer in argvCopy
+        argvCopy[i] = reinterpret_cast<char*>(stringStartAddr);
+
+        // Move the stringStartAddr to the next string
+        stringStartAddr += strLength;
+    }
+
+    // Cleanup: delete temporary arrays
+    delete[] argvCopy;
+
+    return vir_stack;
+}
+
+void Argv()
+{
+	char **argv = kernel->currentThread->getArgv;
+	int stack = storeMem(kernel->currentThread->getArgv, kernel->currentThread->getArgc);
+	kernel->machine->WriteRegister(2, stack);
+}
+
 
 void ExceptionHandler(ExceptionType which)
 {
@@ -605,15 +657,68 @@ void ExceptionHandler(ExceptionType which)
 
 		case SC_Test:
 		{
-			char** argv12 = new char*[100];
-			for(int i = 0; i < 100; i++) {
-				argv12[i] = new char[100];
+			int argc = kernel->machine->ReadRegister(4);
+			int virtAddrArgv = kernel->machine->ReadRegister(5);
+			// Allocate memory for argv
+			char **argv = new char *[argc + 1];
+			for (int i = 0; i <= argc; i++)
+			{
+				argv[i] = new char[20];
 			}
-			argv12[0] = "test";
-			argv12[1] = "123244";
-			int id = kernel->pTab->ExecVUpdate(2, argv12);
-			kernel->pTab->JoinUpdate(id);
-			delete []argv12;
+
+			// Read argv from user memory
+			for (int i = 0; i < argc; i++)
+			{
+				int virtAddrArgv_i;
+				if (!kernel->machine->ReadMem(virtAddrArgv + i * sizeof(int), sizeof(int), &virtAddrArgv_i))
+				{
+					DEBUG(dbgSys, "\nExecV:: Error reading argv from user memory.");
+					for (int j = 0; j <= argc; j++)
+					{
+						delete[] argv[j];
+					}
+					delete[] argv;
+					kernel->machine->WriteRegister(2, -1);
+					return;
+				}
+				if (!readFromMem(argv[i], 20, virtAddrArgv_i))
+				{
+					DEBUG(dbgSys, "\nExecV:: Error reading argv from user memory.");
+					for (int j = 0; j <= argc; j++)
+					{
+						delete[] argv[j];
+					}
+					delete[] argv;
+					kernel->machine->WriteRegister(2, -1);
+					return;
+				}
+			}
+			argv[argc] = NULL; // argv list must end with NULL
+
+			OpenFile *file = kernel->fileSystem->Open(argv[0]);
+			if (file == NULL)
+			{
+				DEBUG(dbgSys, "\nExec:: Can't open this file.");
+				kernel->machine->WriteRegister(2, -1);
+			}
+			delete file;
+
+			int pid = kernel->pTab->ExecVUpdate(argc, argv, virtAddrArgv);
+
+			kernel->machine->WriteRegister(2, pid);
+
+			break;
+		}
+
+		case SC_getArgv:
+		{
+			Argv();
+			break;
+		}
+
+		case SC_getArgc:
+		{
+			Argc();
 			break;
 		}
 

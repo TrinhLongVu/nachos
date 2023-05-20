@@ -37,6 +37,14 @@ Thread::Thread(char *threadName, bool _has_dynamic_name /*=false*/)
 {
     has_dynamic_name = _has_dynamic_name;
     name = threadName;
+
+    getArgv = new char *[50];
+
+    for (int i = 0; i <= 50; i++)
+    {
+        getArgv[i] = new char[20];
+    }
+
     stackTop = NULL;
     stack = NULL;
     status = JUST_CREATED;
@@ -47,8 +55,8 @@ Thread::Thread(char *threadName, bool _has_dynamic_name /*=false*/)
                                 // of machine registers
     }
     space = NULL;
-    if (has_dynamic_name)
-        delete[] name;
+    // if (has_dynamic_name)
+    //     delete[] name;
 }
 
 //----------------------------------------------------------------------

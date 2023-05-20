@@ -144,7 +144,7 @@ class Machine {
 				// memory (at addr).  Return FALSE if a 
 				// correct translation couldn't be found.
   private:
-
+	
 // Routines internal to the machine simulation -- DO NOT call these directly
     void DelayedLoad(int nextReg, int nextVal);  	
 				// Do a pending delayed load (modifying a reg)

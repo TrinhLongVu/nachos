@@ -68,12 +68,12 @@ int PCB::Exec(char *filename, int id)
     return id;
 }
 
-int PCB::ExecV(int argc, char** argv, int id)
+
+int PCB::ExecV(int argc, char **argv, int id, int addr)
 {
     multex->P();
 
-    char* name = argv[0];
-    this->thread = new Thread(name, true);
+    this->thread = new Thread(filename, true);
     if (this->thread == NULL)
     {
         printf("\nPCB::Exec: Not enough memory!\n");
@@ -83,13 +83,13 @@ int PCB::ExecV(int argc, char** argv, int id)
 
     this->thread->processID = id;
     this->parentID = kernel->currentThread->processID;
-
-    
+    this->thread->getArgc = argc;
+    this->thread->getArgv = argv;
 
     this->thread->Fork(StartProcess_2, &this->thread->processID);
 
     multex->V();
-    return id;   
+    return id;
 }
 
 int PCB::GetID() { return thread->processID; }

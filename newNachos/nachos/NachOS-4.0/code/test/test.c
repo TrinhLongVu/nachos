@@ -1,14 +1,15 @@
 #include "../userprog/syscall.h"
 
-int main(int argc, char *argv[])
+int main()
 {
-    // int id1, id2;
-    // id1 = Exec("cat");
-    // id2 = Exec("copy");
-    // Join(id1);
-    // Join(id2);
-
-    Test();
-    PrintString(argv[1]);
-    return 0;
+    char* argv1[] = {"createfile", "hello"};
+    char* argv2[] = {"cat", "hi"};
+    SpaceId t1, t2;
+    t1 = Test(2, argv1);
+    // t2 = Test(2, argv2);
+    // t2 = Exec("cat");
+    
+    Join(t1);
+    // Join(t2);
+    Exit(0);
 }

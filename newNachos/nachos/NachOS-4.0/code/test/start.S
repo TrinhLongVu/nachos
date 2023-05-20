@@ -258,6 +258,22 @@ PrintChar:
 	j 	$31
 	.end PrintChar
 
+	.globl getArgv
+	.ent    getArgv
+getArgv:
+	addiu $2, $0, SC_getArgv
+	syscall
+	j 	$31
+	.end getArgv
+
+	.globl getArgc
+	.ent    getArgc
+getArgc:
+	addiu $2, $0, SC_getArgc
+	syscall
+	j 	$31
+	.end getArgc
+
 /* dummy function to keep gcc happy */
         .globl  __main
         .ent    __main

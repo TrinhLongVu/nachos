@@ -16,12 +16,14 @@ private:
 public:
     int parentID;
     int processID;
-    PCB();
+    int argc;
+    char** argv;
+
     PCB(int id);
     ~PCB();
 
     int Exec(char *filename, int pid);
-    int ExecV(int argc, char** argv, int id);
+    int ExecV(int argc, char** argv, int id, int addr);
 
     int GetID();
     int GetNumWait();

@@ -23,7 +23,7 @@
 #define SC_Exec		2
 #define SC_Join		3
 #define SC_Create	4
-#define SC_Remove       5
+#define SC_Remove   5
 #define SC_Open		6
 #define SC_Read		7
 #define SC_Write	8
@@ -47,6 +47,8 @@
 #define SC_Wait 52
 #define SC_Signal 53
 #define SC_PrintChar 54
+#define SC_getArgv 55
+#define SC_getArgc 56
 
 #ifndef IN_ASM
 
@@ -64,6 +66,8 @@
 
 /* Stop Nachos, and print out performance stats */
 void Halt();		
+char** getArgv();
+int getArgc();
 
 /*
  * Add the two operants and return the result
@@ -123,7 +127,7 @@ typedef int OpenFileId;
 #define _ConsoleInput	0 // the same name of the class in file console.h  
 #define _ConsoleOutput	1  
  
-int Test();
+int Test(int argc, char** argv);
 /* Create a Nachos file, with name "name" */
 /* Note: Create does not open the file.   */
 /* Return 1 on success, negative error code on failure */
